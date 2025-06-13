@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: event-ui
+  labels:
+    app: event-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: event-ui
+  template:
+    metadata:
+      labels:
+        app: event-ui
+    spec:
+      imagePullSecrets:
+        - name: ghcr-secret
+      containers:
+        - name: event-ui
+          image: ghcr.io/leandrodalbo/event-ui:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
