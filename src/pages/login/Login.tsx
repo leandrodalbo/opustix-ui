@@ -1,5 +1,8 @@
-import React from "react";
+import { useAuth } from "../../auth/AuthProvider";
 
-export default function Login() {
-  return <div>Login</div>;
-}
+const Login = () => {
+  const { signinRedirect } = useAuth();
+  return <button onClick={signinRedirect}>Login</button>;
+};
+
+export default Login;

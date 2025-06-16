@@ -1,9 +1,24 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, fireEvent } from "@testing-library/react";
+import { vi } from "vitest";
 import Login from "./Login";
 
-describe("Login Page", () => {
-  it("renders login form", () => {
+const mockSigninRedirect = vi.fn();
+
+vi.mock("../../auth/AuthProvider", () => ({
+  useAuth: () => ({
+    signinRedirect: mockSigninRedirect,
+  }),
+}));
+
+describe("Login component", () => {
+  it("renders the login button", () => {
     render(<Login />);
-    expect(screen.getByText(/Login/i)).toBeInTheDocument();
+    expect(screen.getByText("Login")).toBeInTheDocument();
+  });
+
+  it("signin is called when the button is clicked", () => {
+    render(<Login />);
+    fireEvent.click(screen.getByText("Login"));
+    expect(mockSigninRedirect).toHaveBeenCalled();
   });
 });
