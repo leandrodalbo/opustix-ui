@@ -12,6 +12,7 @@ const userManager = new UserManager(oidcConfig);
 
 interface AuthContextProps {
   user: User | null;
+  isLoading: boolean;
   signinRedirect: () => void;
   signoutRedirect: () => void;
 }
@@ -20,12 +21,14 @@ const AuthContext = createContext<AuthContextProps | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     userManager.getUser().then((loadedUser) => {
       if (loadedUser && !loadedUser.expired) {
         setUser(loadedUser);
       }
+      setIsLoading(false);
     });
 
     userManager.events.addUserLoaded(setUser);
@@ -36,7 +39,9 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const signoutRedirect = () => userManager.signoutRedirect();
 
   return (
-    <AuthContext.Provider value={{ user, signinRedirect, signoutRedirect }}>
+    <AuthContext.Provider
+      value={{ user, isLoading, signinRedirect, signoutRedirect }}
+    >
       {children}
     </AuthContext.Provider>
   );
