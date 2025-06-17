@@ -12,7 +12,8 @@ export const ExistingUserPage = ({
 }: ExistingUserPageProps) => {
   const { user, isLoading } = useAuth();
 
-  if (isLoading) return <div className="spinner">Loading...</div>;
+  if (isLoading) return <div>Loading...</div>;
+  if (!user) return <Navigate to="/login" replace />;
 
   const realmAccess = user?.profile?.realm_access as
     | { roles: string[] }
@@ -23,5 +24,5 @@ export const ExistingUserPage = ({
   if (!roles.some((r) => userRoles.includes(r)))
     return <Navigate to="/unauthorized" replace />;
 
-  return (user && children) || <Navigate to="/login" replace />;
+  return children;
 };

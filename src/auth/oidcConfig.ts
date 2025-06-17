@@ -1,12 +1,12 @@
 import { UserManagerSettings } from "oidc-client-ts";
 
 export const oidcConfig: UserManagerSettings = {
-  authority: "http://localhost:8080/realms/ticketera",
-  client_id: "react-client",
-  redirect_uri: "http://localhost:5173/callback",
-  silent_redirect_uri: "http://localhost:5173/silent-redirect.html",
-  post_logout_redirect_uri: "http://localhost:5173/",
-  response_type: "code",
-  scope: "openid profile email roles",
-  automaticSilentRenew: true,
+  authority: import.meta.env.VITE_AUTHORITY_REALM,
+  client_id: import.meta.env.VITE_AUTHORITY_CLIENT_ID,
+  redirect_uri: import.meta.env.VITE_AUTHORITY_REDIRECT_URI,
+  silent_redirect_uri: import.meta.env.VITE_AUTHORITY_SILENT_REDIRECT_URI,
+  post_logout_redirect_uri: import.meta.env
+    .VITE_AUTHORITY_POST_LOGOUT_REDIRECT_URI,
+  response_type: import.meta.env.VITE_AUTHORITY_RESPONSE_TYPE,
+  scope: import.meta.env.VITE_AUTHORITY_SCOPE,
 };
