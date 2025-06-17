@@ -7,6 +7,7 @@ const mockSigninRedirect = vi.fn();
 vi.mock("../../auth/AuthProvider", () => ({
   useAuth: () => ({
     signinRedirect: mockSigninRedirect,
+    user: null,
   }),
 }));
 
@@ -16,7 +17,7 @@ describe("Login component", () => {
     expect(screen.getByText("Login")).toBeInTheDocument();
   });
 
-  it("signin is called when the button is clicked", () => {
+  it("calls signinRedirect when the button is clicked", () => {
     render(<Login />);
     fireEvent.click(screen.getByText("Login"));
     expect(mockSigninRedirect).toHaveBeenCalled();

@@ -1,15 +1,22 @@
 import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { App } from "./App";
-import { AuthProvider } from "../auth/AuthProvider";
+import { vi } from "vitest";
+
+vi.mock("../auth/AuthProvider", () => ({
+  useAuth: () => ({
+    user: { name: "testuser", profile: { realm_access: { roles: ["USER"] } } },
+    isLoading: false,
+    signinRedirect: vi.fn(),
+    signoutRedirect: vi.fn(),
+  }),
+}));
 
 describe("App Routing", () => {
   const renderWithProviders = (route: string) => {
     render(
       <MemoryRouter initialEntries={[route]}>
-        <AuthProvider>
-          <App />
-        </AuthProvider>
+        <App />
       </MemoryRouter>
     );
   };
@@ -26,11 +33,16 @@ describe("App Routing", () => {
 
   it("renders Profile component on /profile route", () => {
     renderWithProviders("/profile");
-    expect(screen.getByText(/Profile/i)).toBeInTheDocument();
+    expect(screen.getByText(/logout/i)).toBeInTheDocument();
   });
 
-  it("renders Login component on /login route", () => {
+  it("redirec Login if the user exists", () => {
     renderWithProviders("/login");
-    expect(screen.getByRole("button", { name: /login/i })).toBeInTheDocument();
+    expect(screen.getByText(/Home/i)).toBeInTheDocument();
+  });
+
+  it("/events/management requires ADMIN/ORGANIZER", () => {
+    renderWithProviders("/events/management");
+    expect(screen.getByText(/🚫 You do not have access/i)).toBeInTheDocument();
   });
 });

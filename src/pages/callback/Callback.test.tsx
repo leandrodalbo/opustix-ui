@@ -22,7 +22,7 @@ vi.mock("react-router-dom", async () => {
 });
 
 describe("Callback component", () => {
-  it("signin and navigates to /profile", async () => {
+  it("successfully signed-in", async () => {
     render(
       <MemoryRouter>
         <Callback />
@@ -32,7 +32,7 @@ describe("Callback component", () => {
     expect(screen.getByText("Signing in...")).toBeInTheDocument();
 
     await waitFor(() => {
-      expect(mockNavigate).toHaveBeenCalledWith("/profile");
+      expect(mockNavigate).toHaveBeenCalledWith("/");
     });
   });
 });

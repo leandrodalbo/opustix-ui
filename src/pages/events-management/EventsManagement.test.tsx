@@ -1,9 +1,9 @@
 import { render, screen } from "@testing-library/react";
-import LiveEvents from "./LiveEvents";
+import EventsManagement from "./EventsManagement";
 
 describe("LiveEvents Page", () => {
   it("renders LiveEvents page", () => {
-    render(<LiveEvents />);
-    expect(screen.getByText(/LiveEvents/i)).toBeInTheDocument();
+    render(<EventsManagement />);
+    expect(screen.getByText(/EventsManagement/i)).toBeInTheDocument();
   });
 });
