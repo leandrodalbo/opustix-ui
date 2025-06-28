@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { User, Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "../../assets/logo/logo.png";
+import logo from "../../../assets/logo/logo.png";
 
 const NavigationBar = () => {
   const location = useLocation();
@@ -24,7 +24,7 @@ const NavigationBar = () => {
         </button>
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="hidden sm:block flex items-center gap-2"
           onClick={() => setMenuOpen(false)}
         >
           <img src={logo} alt="Logo" className="h-12 w-auto" />
