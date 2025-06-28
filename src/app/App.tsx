@@ -20,15 +20,6 @@ export const App = () => {
         <Route path="/unauthorized" element={<Unauthorized />} />
 
         <Route
-          path="/profile"
-          element={
-            <ExistingUserPage>
-              <Profile />
-            </ExistingUserPage>
-          }
-        />
-
-        <Route
           path="/events/management"
           element={
             <ExistingUserPage roles={["ADMIN", "ORGANIZER"]}>
