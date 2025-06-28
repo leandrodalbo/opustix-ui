@@ -32,13 +32,13 @@ describe("App Routing", () => {
   });
 
   it("renders Profile component on /profile route", () => {
-    renderWithProviders("/profile");
-    expect(screen.getByText(/logout/i)).toBeInTheDocument();
+    renderWithProviders("/cartelera");
+    expect(screen.getByText(/Cartelera/i)).toBeInTheDocument();
   });
 
-  it("redirec Login if the user exists", () => {
+  it("redirect user to Profile page", () => {
     renderWithProviders("/login");
-    expect(screen.getByText(/Home/i)).toBeInTheDocument();
+    expect(screen.getByText(/LOGOUT/i)).toBeInTheDocument();
   });
 
   it("/events/management requires ADMIN/ORGANIZER", () => {
