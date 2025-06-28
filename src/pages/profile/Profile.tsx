@@ -1,13 +1,27 @@
 import { useAuth } from "../../auth/AuthProvider";
 
 export default function Profile() {
-  const { signoutRedirect } = useAuth();
+  const { user, signinRedirect, signoutRedirect } = useAuth();
   return (
-    <button
-      onClick={signoutRedirect}
-      style={{ padding: "10px", fontSize: "16px" }}
+    <div
+      className={`text-lg font-medium flex-1 flex justify-center items-center gap-6`}
     >
-      Logout
-    </button>
+      {user && (
+        <button
+          onClick={signoutRedirect}
+          className="bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+        >
+          LOGOUT
+        </button>
+      )}
+      {!user && (
+        <button
+          className="bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+          onClick={signinRedirect}
+        >
+          LOGIN
+        </button>
+      )}
+    </div>
   );
 }
