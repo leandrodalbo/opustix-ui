@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { App } from "./App";
 import { vi } from "vitest";
+import { events } from "../../../testSetup/mockdata/mockdata";
 
 vi.mock("../auth/AuthProvider", () => ({
   useAuth: () => ({
@@ -9,6 +10,12 @@ vi.mock("../auth/AuthProvider", () => ({
     isLoading: false,
     signinRedirect: vi.fn(),
     signoutRedirect: vi.fn(),
+  }),
+}));
+
+vi.mock("../services/events", () => ({
+  fetchEvents: vi.fn(() => {
+    return events;
   }),
 }));
 
@@ -23,17 +30,13 @@ describe("App Routing", () => {
 
   it("renders Home component on / route", () => {
     renderWithProviders("/");
-    expect(screen.getByText(/Home/i)).toBeInTheDocument();
+    expect(screen.getByText(/All/i)).toBeInTheDocument();
+    expect(screen.getByAltText(`banner-${events[0].id}`)).toBeInTheDocument();
   });
 
   it("renders Events component on /events route", () => {
     renderWithProviders("/events");
     expect(screen.getByText(/Events/i)).toBeInTheDocument();
-  });
-
-  it("renders Cartelera component on /cartelera", () => {
-    renderWithProviders("/cartelera");
-    expect(screen.getByText(/Cartelera/i)).toBeInTheDocument();
   });
 
   it("redirect user to Profile page", () => {

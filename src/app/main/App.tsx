@@ -6,15 +6,14 @@ import Callback from "../pages/callback/Callback";
 import { ExistingUserPage } from "../rbac/ExistingUserPage";
 import Unauthorized from "../pages/unauthorized/Unauthorized";
 import EventsManagement from "../pages/events-management/EventsManagement";
-import Cartelera from "../pages/cartelera/Cartelera";
+import { fetchEvents } from "../services/events";
 
 export const App = () => {
   return (
     <div className="flex-grow overflow-auto px-8 pb-4">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home fetchEvents={fetchEvents} />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/cartelera" element={<Cartelera />} />
         <Route path="/login" element={<Profile />} />
         <Route path="/callback" element={<Callback />} />
         <Route path="/unauthorized" element={<Unauthorized />} />

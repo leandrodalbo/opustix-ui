@@ -23,7 +23,7 @@ describe("NavigationBar", () => {
     expect(screen.getByAltText("Logo")).toBeInTheDocument();
     expect(screen.getByTitle("Usuario")).toBeInTheDocument();
     expect(screen.getByText("EVENTOS")).toBeInTheDocument();
-    expect(screen.getByText("CARTELERA")).toBeInTheDocument();
+    expect(screen.getByText("HOME")).toBeInTheDocument();
   });
 
   it("renders menu button on mobile", () => {
@@ -48,6 +48,6 @@ describe("NavigationBar", () => {
     fireEvent.click(screen.getByLabelText("Toggle menu"));
 
     expect(screen.getByText("EVENTOS")).toBeInTheDocument();
-    expect(screen.getByText("CARTELERA")).toBeInTheDocument();
+    expect(screen.getByText("HOME")).toBeInTheDocument();
   });
 });

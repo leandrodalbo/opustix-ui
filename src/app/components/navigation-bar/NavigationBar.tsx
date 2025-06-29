@@ -1,15 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { User, Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "../../../assets/logo/logo.png";
+import logo from "../../logo/logo.png";
 
 const NavigationBar = () => {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
+    { to: "/", label: "HOME" },
     { to: "/events", label: "EVENTOS" },
-    { to: "/cartelera", label: "CARTELERA" },
   ];
 
   return (
