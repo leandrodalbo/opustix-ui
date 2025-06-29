@@ -6,10 +6,31 @@ import banner14 from "../banners/banner14.jpg";
 import banner15 from "../banners/banner15.jpg";
 import banner16 from "../banners/banner16.jpg";
 
+import bannerImage from "../banners/banner.jpg";
+import bannerImage2 from "../banners/banner2.jpg";
+import bannerImage3 from "../banners/banner3.jpg";
+import bannerImage4 from "../banners/banner4.jpg";
+import bannerImage5 from "../banners/banner5.jpg";
+import bannerImage6 from "../banners//banner6.jpg";
+import bannerImage7 from "../banners/banner7.jpg";
+import bannerImage8 from "../banners//banner8.jpg";
+
 export const events: Event[] = [
   {
     id: "1",
-    categeory: "Recitales",
+    title: "Recital de Piano",
+    description: "Un recital de piano con obras clásicas y contemporáneas.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 100,
+    venue: {
+      id: "venue1",
+      name: "Teatro Principal",
+      address: "Calle Mayor, 123, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Recitales",
     banners: [
       {
         id: "banner11",
@@ -18,11 +39,30 @@ export const events: Event[] = [
         isSecond: false,
         isAdditional: false,
       },
+      {
+        id: "banner1",
+        imageUrl: bannerImage,
+        isMain: false,
+        isSecond: true,
+        isAdditional: false,
+      },
     ],
   },
   {
     id: "2",
-    categeory: "Teatro",
+    title: "Obra de Teatro",
+    description: "Una obra de teatro contemporánea que explora temas sociales.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 200,
+    venue: {
+      id: "venue2",
+      name: "Teatro Nacional",
+      address: "Avenida de la Cultura, 456, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Teatro",
     banners: [
       {
         id: "banner22",
@@ -31,11 +71,30 @@ export const events: Event[] = [
         isSecond: false,
         isAdditional: false,
       },
+      {
+        id: "banner2",
+        imageUrl: bannerImage2,
+        isMain: false,
+        isSecond: true,
+        isAdditional: false,
+      },
     ],
   },
   {
     id: "3",
-    categeory: "Workshops",
+    title: "Taller de Pintura",
+    description: "Un taller práctico de pintura al óleo para principiantes.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 30,
+    venue: {
+      id: "venue3",
+      name: "Centro Cultural",
+      address: "Plaza de las Artes, 789, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Workshops",
     banners: [
       {
         id: "banner44",
@@ -44,11 +103,30 @@ export const events: Event[] = [
         isSecond: false,
         isAdditional: false,
       },
+      {
+        id: "banner3",
+        imageUrl: bannerImage3,
+        isMain: false,
+        isSecond: true,
+        isAdditional: false,
+      },
     ],
   },
   {
     id: "4",
-    categeory: "Festival",
+    title: "Festival de Música",
+    description: "Un festival de música con bandas locales e internacionales.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 5000,
+    venue: {
+      id: "venue4",
+      name: "Parque Central",
+      address: "Avenida de la Música, 321, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Festival",
     banners: [
       {
         id: "banner33",
@@ -57,11 +135,31 @@ export const events: Event[] = [
         isSecond: false,
         isAdditional: false,
       },
+      {
+        id: "banner4",
+        imageUrl: bannerImage4,
+        isMain: false,
+        isSecond: true,
+        isAdditional: false,
+      },
     ],
   },
   {
     id: "5",
-    categeory: "Conferencias",
+    title: "Conferencia sobre Tecnología",
+    description:
+      "Una conferencia sobre las últimas tendencias en tecnología y su impacto en la sociedad.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 500,
+    venue: {
+      id: "venue5",
+      name: "Auditorio Tecnológico",
+      address: "Calle de la Innovación, 654, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Conferencias",
     banners: [
       {
         id: "banner55",
@@ -70,12 +168,33 @@ export const events: Event[] = [
         isSecond: false,
         isAdditional: false,
       },
+      {
+        id: "banner5",
+        imageUrl: bannerImage5,
+        isMain: false,
+        isSecond: true,
+        isAdditional: false,
+      },
     ],
   },
 
   {
     id: "6",
-    categeory: "Familias",
+    title: "Exposición de Arte",
+    description:
+      "Una exposición de arte contemporáneo con obras de artistas emergentes.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 150,
+    venue: {
+      id: "venue6",
+      name: "Galería de Arte Moderno",
+      address: "Calle del Arte, 987, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Familias",
+
     banners: [
       {
         id: "banner111",
@@ -84,11 +203,31 @@ export const events: Event[] = [
         isSecond: false,
         isAdditional: false,
       },
+      {
+        id: "banner6",
+        imageUrl: bannerImage6,
+        isMain: false,
+        isSecond: true,
+        isAdditional: false,
+      },
     ],
   },
   {
     id: "7",
-    categeory: "Infantiles",
+    title: "Cuentacuentos para Niños",
+    description:
+      "Una sesión de cuentacuentos para niños con historias mágicas y divertidas.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 50,
+    venue: {
+      id: "venue7",
+      name: "Biblioteca Infantil",
+      address: "Calle de los Libros, 123, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Infantiles",
     banners: [
       {
         id: "banner222",
@@ -97,11 +236,31 @@ export const events: Event[] = [
         isSecond: false,
         isAdditional: false,
       },
+      {
+        id: "banner7",
+        imageUrl: bannerImage7,
+        isMain: false,
+        isSecond: true,
+        isAdditional: false,
+      },
     ],
   },
   {
     id: "8",
-    categeory: "Cine",
+    title: "Cine al Aire Libre",
+    description:
+      "Una proyección de cine al aire libre con una selección de películas clásicas.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 300,
+    venue: {
+      id: "venue8",
+      name: "Cine Plaza",
+      address: "Plaza del Cine, 456, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Cine",
     banners: [
       {
         id: "banner444",
@@ -110,11 +269,32 @@ export const events: Event[] = [
         isSecond: false,
         isAdditional: false,
       },
+      {
+        id: "banner8",
+        imageUrl: bannerImage8,
+        isMain: false,
+        isSecond: true,
+        isAdditional: false,
+      },
     ],
   },
   {
     id: "9",
-    categeory: "Electronica",
+    title: "Concierto de Jazz",
+    description:
+      "Un concierto de jazz con músicos locales e invitados especiales.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 200,
+    venue: {
+      id: "venue9",
+      name: "Sala de Jazz",
+      address: "Calle del Jazz, 789, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Jazz",
+
     banners: [
       {
         id: "banner333",
@@ -127,7 +307,19 @@ export const events: Event[] = [
   },
   {
     id: "10",
-    categeory: "Deportes",
+    title: "Torneo de Fútbol",
+    description: "Un torneo de fútbol amateur con equipos locales.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 1000,
+    venue: {
+      id: "venue10",
+      name: "Estadio Municipal",
+      address: "Avenida del Fútbol, 321, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Deportes",
     banners: [
       {
         id: "banner55",
@@ -140,7 +332,19 @@ export const events: Event[] = [
   },
   {
     id: "11",
-    categeory: "Fiestas",
+    title: "Feria de Artesanía",
+    description: "Una feria de artesanía local con productos hechos a mano.",
+    startTime: 2074715377,
+    endTime: 2074715377,
+    capacity: 500,
+    venue: {
+      id: "venue11",
+      name: "Plaza de Artesanos",
+      address: "Calle de la Artesanía, 654, Madrid",
+      createdAt: 1672531199,
+    },
+    createdAt: 1672531199,
+    category: "Fiestas",
     banners: [
       {
         id: "banner55",

@@ -30,7 +30,7 @@ describe("App Routing", () => {
 
   it("renders Home component on / route", () => {
     renderWithProviders("/");
-    expect(screen.getByText(/All/i)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "All" })).toBeInTheDocument();
     expect(screen.getByAltText(`banner-${events[0].id}`)).toBeInTheDocument();
   });
 

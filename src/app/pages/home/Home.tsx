@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { CategoryPills } from "../../components/CategoryPills/CategoryPills";
 import { Event } from "../../types/types";
-import MainBanner from "../../components/main-banner/MainBanner";
+import { EventsThumbnailGrid } from "../../components/events-thumbnail-grid/EventsThumbnailGrid";
+import { EventsBanners } from "../../components/events-banners/EventsBanners";
 
 interface HomeProps {
   fetchEvents: () => Event[];
@@ -12,16 +13,20 @@ const Home = ({ fetchEvents }: HomeProps) => {
 
   const categories = [
     "All",
-    ...Array.from(new Set(events.map((event: Event) => event.categeory))),
+    ...Array.from(new Set(events.map((event: Event) => event.category))),
   ];
 
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
 
-  const filteredEvents = events.filter((event: Event) => {
-    const hasMainBanner = event.banners.some((b) => b.isMain);
+  const eventsWithMainBanners = events.filter((event: Event) => {
+    return event.banners.some((b) => b.isMain);
+  });
+
+  const eventsWithSecondBanners = events.filter((event: Event) => {
+    const hasSecondBanner = event.banners.some((b) => b.isSecond);
     const matchesCategory =
-      selectedCategory === "All" || event.categeory === selectedCategory;
-    return hasMainBanner && matchesCategory;
+      selectedCategory === "All" || event.category === selectedCategory;
+    return hasSecondBanner && matchesCategory;
   });
 
   return (
@@ -34,19 +39,11 @@ const Home = ({ fetchEvents }: HomeProps) => {
         />
       </div>
 
-      {filteredEvents.map((event: Event) => {
-        const mainBanner = event.banners.find((b) => b.isMain);
+      {selectedCategory === "All" && (
+        <EventsBanners events={eventsWithMainBanners} />
+      )}
 
-        return (
-          mainBanner && (
-            <MainBanner
-              key={mainBanner.id}
-              banner={mainBanner.imageUrl}
-              altValue={`banner-${event.id}`}
-            />
-          )
-        );
-      })}
+      <EventsThumbnailGrid events={eventsWithSecondBanners} />
     </div>
   );
 };
