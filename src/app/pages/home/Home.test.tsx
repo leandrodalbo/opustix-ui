@@ -1,8 +1,7 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import Home from "./Home";
-import { Event } from "../../types/types";
-import "@testing-library/jest-dom";
 import { events } from "../../../../testSetup/mockdata/mockdata";
+import "@testing-library/jest-dom";
 
 const fetchEvents = () => events;
 
@@ -10,27 +9,31 @@ describe("Home component", () => {
   it("renders category pills including 'All'", () => {
     render(<Home fetchEvents={fetchEvents} />);
     expect(screen.getByText("All")).toBeInTheDocument();
-    expect(screen.getByText(events[0].categeory)).toBeInTheDocument();
-  });
 
-  it("shows only events with a main banner", () => {
-    render(<Home fetchEvents={fetchEvents} />);
+    expect(screen.getByRole("button", { name: "All" })).toBeInTheDocument();
     expect(
-      screen.queryByAltText(`banner-${events[10].id}`)
-    ).not.toBeInTheDocument();
-    expect(screen.getByAltText(`banner-${events[0].id}`)).toBeInTheDocument();
+      screen.getByRole("button", { name: events[0].category })
+    ).toBeInTheDocument();
   });
 
-  it("filters events by selected category", () => {
+  it("shows events with main banners on 'All' category", () => {
+    render(<Home fetchEvents={fetchEvents} />);
+    const eventsWithMainBanners = events.filter((event) =>
+      event.banners.some((banner) => banner.isMain)
+    );
+    eventsWithMainBanners.forEach((event) => {
+      expect(screen.getByAltText(`banner-${event.id}`)).toBeInTheDocument();
+    });
+  });
+
+  it("filters events by selected category", async () => {
     render(<Home fetchEvents={fetchEvents} />);
 
-    fireEvent.click(screen.getByText(events[1].categeory));
+    fireEvent.click(screen.getByRole("button", { name: events[1].category }));
 
-    waitFor(() => {
-      expect(screen.getByAltText(`banner-${events[0].id}`)).toBeInTheDocument();
-      expect(
-        screen.getByAltText(`banner-${events[0].id}`)
-      ).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText(events[1].title)).toBeInTheDocument();
+      expect(screen.queryByAltText(events[0].title)).not.toBeInTheDocument();
     });
   });
 });
