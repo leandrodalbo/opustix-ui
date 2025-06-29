@@ -8,8 +8,8 @@ const NavigationBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
+    { to: "/", label: "HOME" },
     { to: "/events", label: "EVENTOS" },
-    { to: "/cartelera", label: "CARTELERA" },
   ];
 
   return (

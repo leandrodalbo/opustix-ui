@@ -31,11 +31,6 @@ describe("App Routing", () => {
     expect(screen.getByText(/Events/i)).toBeInTheDocument();
   });
 
-  it("renders Cartelera component on /cartelera", () => {
-    renderWithProviders("/cartelera");
-    expect(screen.getByText(/Cartelera/i)).toBeInTheDocument();
-  });
-
   it("redirect user to Profile page", () => {
     renderWithProviders("/login");
     expect(screen.getByText(/LOGOUT/i)).toBeInTheDocument();
