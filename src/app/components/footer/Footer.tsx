@@ -19,7 +19,7 @@ const Footer = () => {
             <FaDiscord size={20} />
           </a>
           <a
-            href="https://twitter.com/your-profile"
+            href="https://x.com/Opustix"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-secondary transition-colors"
