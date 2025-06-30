@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
-import Events from "../pages/events/Events";
+import EventsPage from "../pages/events/EventsPage";
 import Profile from "../pages/profile/Profile";
 import Callback from "../pages/callback/Callback";
 import { ExistingUserPage } from "../rbac/ExistingUserPage";
@@ -13,7 +13,10 @@ export const App = () => {
     <div className="flex-grow overflow-auto px-8 pb-4">
       <Routes>
         <Route path="/" element={<Home fetchEvents={fetchEvents} />} />
-        <Route path="/events" element={<Events />} />
+        <Route
+          path="/events"
+          element={<EventsPage fetchEvents={fetchEvents} />}
+        />
         <Route path="/login" element={<Profile />} />
         <Route path="/callback" element={<Callback />} />
         <Route path="/unauthorized" element={<Unauthorized />} />

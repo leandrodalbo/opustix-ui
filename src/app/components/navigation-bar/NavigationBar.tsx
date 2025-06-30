@@ -10,6 +10,10 @@ const NavigationBar = () => {
   const navItems = [
     { to: "/", label: "HOME" },
     { to: "/events", label: "EVENTOS" },
+    { to: "/tickets", label: "TICKETS" },
+    { to: "/productores", label: "PRODUCTORES" },
+    { to: "/contacto", label: "CONTACTO" },
+    { to: "/preguntas", label: "PREGUNTAS" },
   ];
 
   return (
