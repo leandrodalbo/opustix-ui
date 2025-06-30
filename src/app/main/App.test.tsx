@@ -36,7 +36,10 @@ describe("App Routing", () => {
 
   it("renders Events component on /events route", () => {
     renderWithProviders("/events");
-    expect(screen.getByText(/Events/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Event Title")).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Ciudad")).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Categoría")).toBeInTheDocument();
+    expect(screen.getByTestId("events-material-grid")).toBeInTheDocument();
   });
 
   it("redirect user to Profile page", () => {

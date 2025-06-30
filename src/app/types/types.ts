@@ -8,16 +8,18 @@ export interface Event {
   venue: Venue;
   createdAt: number;
   category: string;
-  banners: eventBanner[];
+  banners: EventBanner[];
 }
 
 export interface Venue {
   id: string;
   name: string;
   address: string;
+  city: string;
+  country: string;
   createdAt: number;
 }
-export interface eventBanner {
+export interface EventBanner {
   id: string;
   imageUrl: string;
   isMain: boolean;

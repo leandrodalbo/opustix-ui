@@ -21,7 +21,7 @@ export const EventsThumbnailGrid = ({ events }: EventsThumbnailGridProps) => {
             className="bg-gray-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
           >
             <img
-              src={event.thumbnail!.imageUrl}
+              src={event.thumbnail?.imageUrl}
               alt={`thumbnail-${event.id}`}
               className="w-full h-48 object-cover"
             />
