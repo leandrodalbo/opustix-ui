@@ -7,6 +7,7 @@ import { ExistingUserPage } from "../rbac/ExistingUserPage";
 import Unauthorized from "../pages/unauthorized/Unauthorized";
 import EventsManagement from "../pages/events-management/EventsManagement";
 import { fetchEvents } from "../services/events";
+import Contact from "../pages/contact/Contact";
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
         <Route path="/login" element={<Profile />} />
         <Route path="/callback" element={<Callback />} />
         <Route path="/unauthorized" element={<Unauthorized />} />
+        <Route path="/contacto" element={<Contact />} />
 
         <Route
           path="/events/management"
