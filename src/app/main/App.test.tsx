@@ -51,4 +51,10 @@ describe("App Routing", () => {
     renderWithProviders("/events/management");
     expect(screen.getByText(/🚫 You do not have access/i)).toBeInTheDocument();
   });
+
+  it("renders Contact component on /contacto route", () => {
+  renderWithProviders("/contacto");
+  expect(screen.getByText(/📞 Contacta con nosotros/i)).toBeInTheDocument();
+});
+
 });
