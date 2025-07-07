@@ -46,5 +46,13 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       - name: Build and Push Docker image
-        run: |
-          docker buildx build --push --build-arg VITE_AUTHORITY_REALM=${{ secrets.VITE_AUTHORITY_REALM }} --build-arg VITE_AUTHORITY_CLIENT_ID=${{ secrets.VITE_AUTHORITY_CLIENT_ID }} --build-arg VITE_AUTHORITY_REDIRECT_URI=${{ secrets.VITE_AUTHORITY_REDIRECT_URI }} --build-arg VITE_AUTHORITY_SILENT_REDIRECT_URI=${{ secrets.VITE_AUTHORITY_SILENT_REDIRECT_URI }} --build-arg VITE_AUTHORITY_POST_LOGOUT_REDIRECT_URI=${{ secrets.VITE_AUTHORITY_POST_LOGOUT_REDIRECT_URI }} --build-arg VITE_AUTHORITY_RESPONSE_TYPE=${{ secrets.VITE_AUTHORITY_RESPONSE_TYPE }} --build-arg VITE_AUTHORITY_SCOPE=${{ secrets.VITE_AUTHORITY_SCOPE }} -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }} .
+        run: >
+          docker buildx build --push
+          --build-arg VITE_AUTHORITY_REALM=${{ secrets.VITE_AUTHORITY_REALM }}
+          --build-arg VITE_AUTHORITY_CLIENT_ID=${{ secrets.VITE_AUTHORITY_CLIENT_ID }}
+          --build-arg VITE_AUTHORITY_REDIRECT_URI=${{ secrets.VITE_AUTHORITY_REDIRECT_URI }}
+          --build-arg VITE_AUTHORITY_SILENT_REDIRECT_URI=${{ secrets.VITE_AUTHORITY_SILENT_REDIRECT_URI }}
+          --build-arg VITE_AUTHORITY_POST_LOGOUT_REDIRECT_URI=${{ secrets.VITE_AUTHORITY_POST_LOGOUT_REDIRECT_URI }}
+          --build-arg VITE_AUTHORITY_RESPONSE_TYPE=${{ secrets.VITE_AUTHORITY_RESPONSE_TYPE }}
+          --build-arg VITE_AUTHORITY_SCOPE=${{ secrets.VITE_AUTHORITY_SCOPE }}
+          -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }} .
