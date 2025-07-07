@@ -1,2 +1,19 @@
+FROM node:20 AS builder
+
+RUN npm install -g n \
+  && n 23.8.0
+
+ENV PATH="/usr/local/n/versions/node/23.8.0/bin:$PATH"
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+RUN npm run build
+
 FROM nginx:alpine
-COPY ./index.html /usr/share/nginx/html/index.html
+COPY --from=builder /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
