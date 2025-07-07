@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-RUN npm rm .env
+RUN rm .env
 
 ARG VITE_AUTHORITY_REALM
 ARG VITE_AUTHORITY_CLIENT_ID
