@@ -6,18 +6,24 @@ import {
   startOfDay,
   isBefore,
 } from "date-fns";
+import { useQuery } from "@tanstack/react-query";
+
 import { Box } from "@mui/material";
 
 import { Event } from "../../types/types";
 import EventFilters from "../../components/events-filters/EventsFilters";
 import { EventsMaterialGrid } from "../../components/events-grid/EventsMaterialGrid";
+import AboutFetch from "../../components/about-fetch/AboutFetch";
 
 interface EventsPageProps {
-  fetchEvents: () => Event[];
+  fetchEvents: () => Promise<Event[]>;
 }
 
 export default function EventsPage({ fetchEvents }: EventsPageProps) {
-  const eventsData = fetchEvents();
+  const { data, isLoading, error } = useQuery<Event[]>({
+    queryKey: ["events"],
+    queryFn: fetchEvents,
+  });
 
   const [eventTitle, setEventTitle] = useState("");
   const [cityFilter, setCityFilter] = useState("");
@@ -31,7 +37,9 @@ export default function EventsPage({ fetchEvents }: EventsPageProps) {
     setDateFilter(null);
   };
 
-  const filteredEvents = eventsData
+  const events = (data ?? []) as Event[];
+
+  const filteredEvents = events
     .filter((event) => {
       const matchesTitle =
         eventTitle.length > 0
@@ -65,6 +73,14 @@ export default function EventsPage({ fetchEvents }: EventsPageProps) {
       const dateB = fromUnixTime(b.startTime);
       return dateA.getTime() - dateB.getTime();
     });
+
+  if (isLoading || error)
+    return (
+      <AboutFetch
+        isLoading={isLoading}
+        error={error || Error("An error occurred while fetching events.")}
+      />
+    );
 
   return (
     <Box

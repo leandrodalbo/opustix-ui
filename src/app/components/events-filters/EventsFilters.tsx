@@ -31,7 +31,7 @@ const EventFilters = ({
     <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center mb-6 text-black">
       <input
         type="text"
-        placeholder="Event Title"
+        placeholder="Título del evento"
         value={eventTitle}
         onChange={(e) => setEvenTitle(e.target.value)}
         className="w-64 h-10 text-sm bg-white text-black placeholder-black rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500"

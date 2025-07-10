@@ -2,38 +2,63 @@ import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import Home from "./Home";
 import { events } from "../../../../testSetup/mockdata/mockdata";
 import "@testing-library/jest-dom";
+import { vi } from "vitest";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const fetchEvents = () => events;
+const fetchEvents = vi.fn().mockResolvedValue(events);
+
+const createTestQueryClient = () =>
+  new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  });
+
+function renderWithClient(ui: React.ReactElement) {
+  const testQueryClient = createTestQueryClient();
+  return render(
+    <QueryClientProvider client={testQueryClient}>{ui}</QueryClientProvider>
+  );
+}
 
 describe("Home component", () => {
-  it("renders category pills including 'All'", () => {
-    render(<Home fetchEvents={fetchEvents} />);
-    expect(screen.getByText("All")).toBeInTheDocument();
+  it("renders category pills including 'All'", async () => {
+    renderWithClient(<Home fetchEvents={fetchEvents} />);
 
-    expect(screen.getByRole("button", { name: "All" })).toBeInTheDocument();
+    expect(await screen.findByText("All")).toBeInTheDocument();
     expect(
-      screen.getByRole("button", { name: events[0].category })
+      await screen.findByRole("button", { name: events[0].category })
     ).toBeInTheDocument();
   });
 
-  it("shows events with main banners on 'All' category", () => {
-    render(<Home fetchEvents={fetchEvents} />);
+  it("shows events with main banners on 'All' category", async () => {
+    renderWithClient(<Home fetchEvents={fetchEvents} />);
+
     const eventsWithMainBanners = events.filter((event) =>
       event.banners.some((banner) => banner.isMain)
     );
-    eventsWithMainBanners.forEach((event) => {
-      expect(screen.getByAltText(`banner-${event.id}`)).toBeInTheDocument();
-    });
+
+    for (const event of eventsWithMainBanners) {
+      expect(
+        await screen.findByAltText(`banner-${event.id}`)
+      ).toBeInTheDocument();
+    }
   });
 
   it("filters events by selected category", async () => {
-    render(<Home fetchEvents={fetchEvents} />);
+    renderWithClient(<Home fetchEvents={fetchEvents} />);
 
-    fireEvent.click(screen.getByRole("button", { name: events[1].category }));
+    const categoryButton = await screen.findByRole("button", {
+      name: events[1].category,
+    });
+
+    fireEvent.click(categoryButton);
 
     await waitFor(() => {
       expect(screen.getByText(events[1].title)).toBeInTheDocument();
-      expect(screen.queryByAltText(events[0].title)).not.toBeInTheDocument();
+      expect(screen.queryByText(events[0].title)).not.toBeInTheDocument();
     });
   });
 });

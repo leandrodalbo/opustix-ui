@@ -30,22 +30,30 @@ export const EventsMaterialGrid = ({ events }: EventsMaterialGridProps) => {
             key={event.id}
             sx={{ gridColumn: { xs: "span 4", sm: "span 4", md: "span 4" } }}
           >
-            <Card>
+            <Card
+              sx={{
+                width: 260,
+                height: 480,
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+              }}
+            >
               <CardMedia
                 component="img"
-                sx={{ height: 260, width: 260, objectFit: "cover" }}
+                sx={{ height: 260, width: "100%", objectFit: "cover" }}
                 image={banner?.imageUrl}
                 alt={event.title}
               />
-              <CardContent>
+              <CardContent sx={{ flexGrow: 1 }}>
                 <Typography variant="h6" gutterBottom>
-                  {`${event.title}`}
+                  {event.title}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  {`Categoria: ${event.category}`}
+                  Categoria: {event.category}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  {`Ciudad: ${event.venue.city} - ${event.venue.country}`}
+                  Ciudad: {event.venue.city} - {event.venue.country}
                 </Typography>
                 <Typography variant="body2" color="textSecondary">
                   {fromUnixTime(event.startTime).toLocaleDateString("es-ES")} -{" "}
@@ -62,11 +70,11 @@ export const EventsMaterialGrid = ({ events }: EventsMaterialGridProps) => {
                       backgroundColor: "#388e3c",
                     },
                   }}
-                  onClick={() => {
+                  onClick={() =>
                     console.log(
                       `Comprar entrada para el evento: ${event.title}`
-                    );
-                  }}
+                    )
+                  }
                 >
                   COMPRAR
                 </Button>
