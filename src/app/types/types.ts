@@ -5,9 +5,8 @@ export interface Event {
   startTime: number;
   endTime: number;
   capacity: number;
-  venue: Venue;
-  createdAt: number;
   category: string;
+  venue: Venue;
   banners: EventBanner[];
 }
 
@@ -17,8 +16,8 @@ export interface Venue {
   address: string;
   city: string;
   country: string;
-  createdAt: number;
 }
+
 export interface EventBanner {
   id: string;
   imageUrl: string;

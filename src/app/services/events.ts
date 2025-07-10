@@ -1,8 +1,12 @@
-import { events } from "../../../testSetup/mockdata/mockdata";
 import { Event } from "../types/types";
 
-const fetchEvents = (): Event[] => {
-  return events;
+import apiFetch from "./apiConfig";
+
+export const fetchEvents = async (): Promise<Event[]> => {
+  const response = await apiFetch.get<Event[]>(
+    "/api/public/ticketera/events/all"
+  );
+  return response.data;
 };
 
-export { fetchEvents };
+export default fetchEvents;

@@ -3,13 +3,20 @@ import { CategoryPills } from "../../components/CategoryPills/CategoryPills";
 import { Event } from "../../types/types";
 import { EventsThumbnailGrid } from "../../components/events-thumbnail-grid/EventsThumbnailGrid";
 import { EventsBanners } from "../../components/events-banners/EventsBanners";
+import { useQuery } from "@tanstack/react-query";
+import AboutFetch from "../../components/about-fetch/AboutFetch";
 
 interface HomeProps {
-  fetchEvents: () => Event[];
+  fetchEvents: () => Promise<Event[]>;
 }
 
 const Home = ({ fetchEvents }: HomeProps) => {
-  const events = fetchEvents();
+  const { data, isLoading, error } = useQuery<Event[]>({
+    queryKey: ["events"],
+    queryFn: fetchEvents,
+  });
+
+  const events = (data ?? []) as Event[];
 
   const categories = [
     "All",
@@ -28,6 +35,14 @@ const Home = ({ fetchEvents }: HomeProps) => {
       selectedCategory === "All" || event.category === selectedCategory;
     return hasSecondBanner && matchesCategory;
   });
+
+  if (isLoading || error)
+    return (
+      <AboutFetch
+        isLoading={isLoading}
+        error={error || Error("An error occurred while fetching events.")}
+      />
+    );
 
   return (
     <div className="bg-black text-black min-h-screen px-4 py-2">

@@ -1,10 +1,27 @@
 import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import EventsPage from "./EventsPage"; // Adjust path
 import { vi } from "vitest";
 import { events } from "../../../../testSetup/mockdata/mockdata";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
-const fetchEvents = () => events;
+const fetchEvents = vi.fn().mockResolvedValue(events);
+
+const createTestQueryClient = () =>
+  new QueryClient({
+    defaultOptions: {
+      queries: {
+        retry: false,
+      },
+    },
+  });
+
+function renderWithClient(ui: React.ReactElement) {
+  const testQueryClient = createTestQueryClient();
+  return render(
+    <QueryClientProvider client={testQueryClient}>{ui}</QueryClientProvider>
+  );
+}
 
 vi.mock("../../components/events-filters/EventsFilters", async () => {
   const actual = await vi.importActual(
@@ -66,50 +83,68 @@ vi.mock("../../components/events-grid/EventsMaterialGrid", async () => {
 
 describe("EventsPage", () => {
   const setup = () => {
-    render(<EventsPage fetchEvents={fetchEvents} />);
+    renderWithClient(<EventsPage fetchEvents={fetchEvents} />);
   };
 
-  it("renders all events by default", () => {
+  it("renders all events by default", async () => {
     setup();
-    expect(screen.getAllByTestId("event-card")).toHaveLength(events.length);
+    const eventCards = await screen.findAllByTestId("event-card");
+    expect(eventCards).toHaveLength(events.length);
   });
 
-  it("filters by title", () => {
+  it("filters by title", async () => {
     setup();
-    fireEvent.change(screen.getByPlaceholderText("Event Title"), {
-      target: { value: events[0].title },
+    const titleInput = await screen.findByPlaceholderText("Título del evento");
+
+    fireEvent.change(titleInput, { target: { value: events[0].title } });
+
+    await waitFor(() => {
+      const filtered = events.filter((e) =>
+        e.title.toLowerCase().includes(events[0].title.toLowerCase())
+      );
+      expect(screen.getAllByTestId("event-card")).toHaveLength(filtered.length);
     });
-    expect(screen.getAllByTestId("event-card")).toHaveLength(
-      events.filter((e) => e.title.includes(events[0].title)).length
-    );
   });
 
-  it("filters by city", () => {
+  it("filters by city", async () => {
     setup();
-    fireEvent.change(screen.getByPlaceholderText("Ciudad"), {
-      target: { value: events[0].venue.city },
+    const cityInput = await screen.findByPlaceholderText("Ciudad");
+
+    fireEvent.change(cityInput, { target: { value: events[0].venue.city } });
+
+    await waitFor(() => {
+      const filtered = events.filter((e) =>
+        e.venue.city.toLowerCase().includes(events[0].venue.city.toLowerCase())
+      );
+      expect(screen.getAllByTestId("event-card")).toHaveLength(filtered.length);
     });
-    expect(screen.getAllByTestId("event-card")).toHaveLength(
-      events.filter((e) => e.venue.city.includes(events[0].venue.city)).length
-    );
   });
 
-  it("filters by category", () => {
+  it("filters by category", async () => {
     setup();
-    fireEvent.change(screen.getByPlaceholderText("Categoría"), {
-      target: { value: events[0].category },
+    const categoryInput = await screen.findByPlaceholderText("Categoría");
+
+    fireEvent.change(categoryInput, { target: { value: events[0].category } });
+
+    await waitFor(() => {
+      const filtered = events.filter((e) =>
+        e.category.toLowerCase().includes(events[0].category.toLowerCase())
+      );
+      expect(screen.getAllByTestId("event-card")).toHaveLength(filtered.length);
     });
-    expect(screen.getAllByTestId("event-card")).toHaveLength(
-      events.filter((e) => e.category.includes(events[0].category)).length
-    );
   });
 
-  it("clears filters", () => {
+  it("clears filters", async () => {
     setup();
-    fireEvent.change(screen.getByPlaceholderText("Event Title"), {
-      target: { value: events[0].title },
+
+    const titleInput = await screen.findByPlaceholderText("Título del evento");
+    fireEvent.change(titleInput, { target: { value: events[0].title } });
+
+    const clearButton = await screen.findByText("Limpiar filtros");
+    fireEvent.click(clearButton);
+
+    await waitFor(() => {
+      expect(screen.getAllByTestId("event-card")).toHaveLength(events.length);
     });
-    fireEvent.click(screen.getByText("Limpiar filtros"));
-    expect(screen.getAllByTestId("event-card")).toHaveLength(events.length);
   });
 });

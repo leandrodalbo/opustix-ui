@@ -51,7 +51,9 @@ describe("EventFilters", () => {
 
   it("renders all filters and the clear button", () => {
     setup();
-    expect(screen.getByPlaceholderText("Event Title")).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText("Título del evento")
+    ).toBeInTheDocument();
     expect(screen.getByPlaceholderText("Ciudad")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("Categoría")).toBeInTheDocument();
     expect(screen.getByPlaceholderText("Fecha")).toBeInTheDocument();
@@ -62,7 +64,7 @@ describe("EventFilters", () => {
 
   it("calls setEvenTitle on input change", () => {
     const { setEvenTitle } = setup();
-    fireEvent.change(screen.getByPlaceholderText("Event Title"), {
+    fireEvent.change(screen.getByPlaceholderText("Título del evento"), {
       target: { value: "Feria" },
     });
     expect(setEvenTitle).toHaveBeenCalledWith("Feria");
