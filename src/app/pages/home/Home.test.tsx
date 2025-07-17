@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import Home from "./Home";
-import { events } from "../../../../testSetup/mockdata/mockdata";
+import { events } from "../../../../testSetup/mockdata";
 import "@testing-library/jest-dom";
 import { vi } from "vitest";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";

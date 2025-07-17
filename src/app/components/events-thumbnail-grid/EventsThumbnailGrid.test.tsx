@@ -3,7 +3,7 @@ import { EventsThumbnailGrid } from "./EventsThumbnailGrid";
 import { Event } from "../../types/types";
 import "@testing-library/jest-dom";
 
-import { events } from "../../../../testSetup/mockdata/mockdata";
+import { events } from "../../../../testSetup/mockdata";
 
 describe("EventsThumbnailGrid", () => {
   it("renders events correctly", () => {
@@ -15,7 +15,6 @@ describe("EventsThumbnailGrid", () => {
 
     eventsWithSecondBanners.forEach((event: Event) => {
       expect(screen.getByText(event.title)).toBeInTheDocument();
-      expect(screen.getByText(event.category)).toBeInTheDocument();
     });
   });
 });

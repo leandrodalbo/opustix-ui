@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import { EventsBanners } from "./EventsBanners";
 import { Event } from "../../types/types";
-import { events } from "../../../../testSetup/mockdata/mockdata";
+import { events } from "../../../../testSetup/mockdata";
 import "@testing-library/jest-dom";
 
 describe("EventsBanners", () => {

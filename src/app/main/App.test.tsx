@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { App } from "./App";
 import { vi } from "vitest";
-import { events } from "../../../testSetup/mockdata/mockdata";
+import { events } from "../../../testSetup/mockdata";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const createTestQueryClient = () =>
