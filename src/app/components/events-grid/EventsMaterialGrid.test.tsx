@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { EventsMaterialGrid } from "./EventsMaterialGrid"; // Adjust import path
-import { events } from "../../../../testSetup/mockdata/mockdata";
+import { events } from "../../../../testSetup/mockdata";
 
 import { fromUnixTime } from "date-fns";
 

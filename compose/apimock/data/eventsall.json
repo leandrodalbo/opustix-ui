@@ -1,0 +1,599 @@
+[
+  {
+    "id": "e19ed6e6-cbde-4a88-8381-ce1c37b8947d",
+    "title": "Festival de Jazz de Invierno",
+    "description": "Una experiencia inmersiva que celebra leyendas del jazz y nuevos talentos.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 300,
+    "category": "música",
+    "venue": {
+      "id": "1b7726b8-cd4b-4164-9193-57011c397a78",
+      "name": "Luna Park",
+      "address": "Av. Madero 420",
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "dd2948bc-7f15-4014-a42f-e131b5b575d5",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/dd2948bc-7f15-4014-a42f-e131b5b575d5_banner9.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "8b842c78-a2c8-451d-b2db-cbce072a789c",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/8b842c78-a2c8-451d-b2db-cbce072a789c_banner2.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      }
+    ]
+  },
+  {
+    "id": "9b958b1a-e89b-4be2-80bb-429b0bcc3816",
+    "title": "Feria de Arte Navideña",
+    "description": "Artistas locales presentan sus obras ideales para regalar en fiestas.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 200,
+    "category": "arte",
+    "venue": {
+      "id": "6205ef0f-9272-46f8-904a-7b4a25eba955",
+      "name": "Estadio Monumental",
+      "address": "Av. Figueroa Alcorta 7597",
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "505e1b58-b19e-468d-aa86-526b9288218d",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/505e1b58-b19e-468d-aa86-526b9288218d_banner9.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "e53103c3-4559-459a-afb3-c06c0b47e405",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/e53103c3-4559-459a-afb3-c06c0b47e405_banner2.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      }
+    ]
+  },
+  {
+    "id": "fe3ee6ba-f95c-4637-8dd4-9fee0a421764",
+    "title": "Teatro en la Noche",
+    "description": "Obra dramática al aire libre con música en vivo.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 120,
+    "category": "teatro",
+    "venue": {
+      "id": "ba9d9432-23c4-4a46-9ca8-f48fad130d85",
+      "name": "Teatro El Círculo",
+      "address": "Laprida 1223",
+      "city": "Rosario",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "5af61f5c-5b32-4431-8d10-da2b69c8b299",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/5af61f5c-5b32-4431-8d10-da2b69c8b299_banner13.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "7d96bc01-b79a-4b8b-a3bf-00d864ab5d2a",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/7d96bc01-b79a-4b8b-a3bf-00d864ab5d2a_banner3.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      }
+    ]
+  },
+  {
+    "id": "25839890-8d73-4594-b504-2819731c3642",
+    "title": "Ciclo de Cine Independiente",
+    "description": "Proyecciones de películas locales con debates posteriores.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 100,
+    "category": "cine",
+    "venue": {
+      "id": "20bf84e3-ed70-42d4-abdc-5e3312cd04c9",
+      "name": "Auditorio Juan Victoria",
+      "address": "25 de Mayo 1215 Oeste",
+      "city": "San Juan",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "29a69f22-f8ad-4b8c-ae3e-d395b90fd6a6",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/29a69f22-f8ad-4b8c-ae3e-d395b90fd6a6_banner14.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "bc3c3bdc-ac70-4cdf-a978-95c9ec63b23e",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/bc3c3bdc-ac70-4cdf-a978-95c9ec63b23e_banner3.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      }
+    ]
+  },
+  {
+    "id": "e23872b2-f904-4be4-8823-df85f7f27afd",
+    "title": "Encuentro de Literatura Contemporánea",
+    "description": "Lecturas de autor y talleres de escritura creativa.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 80,
+    "category": "literatura",
+    "venue": {
+      "id": "f389184c-f6bb-44db-ad6a-594477b75fb0",
+      "name": "Centro Cultural Kirchner",
+      "address": "Sarmiento 151",
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "c3d210c5-6ff9-4543-925c-5ad0d5274791",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/c3d210c5-6ff9-4543-925c-5ad0d5274791_favacard.png",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "5735169d-33bd-4b0a-b0f2-3c434b90b15c",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/5735169d-33bd-4b0a-b0f2-3c434b90b15c_banner5.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      }
+    ]
+  },
+  {
+    "id": "01c3aba0-7cf9-4ebf-80e0-c8659b18d468",
+    "title": "Noche Flamenca",
+    "description": "Presentación en vivo de flamenco tradicional y moderno.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 250,
+    "category": "danza",
+    "venue": {
+      "id": "eb4cedda-ff4d-45e2-ade3-4761d997f310",
+      "name": "Hipódromo de Palermo",
+      "address": "Av. del Libertador 4101",
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "a4dc371d-0ccf-4a5a-8ee0-a12e6f8ee155",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/a4dc371d-0ccf-4a5a-8ee0-a12e6f8ee155_naranjax_banner.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "8194bdbb-04b4-4b73-86af-ae757edbf125",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/8194bdbb-04b4-4b73-86af-ae757edbf125_banner7.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      }
+    ]
+  },
+  {
+    "id": "dbacf45f-6df3-408d-aef0-fa7801d2ef48",
+    "title": "Concierto de Año Nuevo",
+    "description": "Gran concierto sinfónico para recibir el 2026.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 500,
+    "category": "música",
+    "venue": {
+      "id": "9ac21909-f5a9-4e17-8d0b-463d21c82eea",
+      "name": "Teatro Independencia",
+      "address": "Chile 1184",
+      "city": "Mendoza",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "41776dfa-668a-4615-aa84-c110f49eb121",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/41776dfa-668a-4615-aa84-c110f49eb121_banner16.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "a06f1332-5d59-427e-bc48-364add3510f4",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/a06f1332-5d59-427e-bc48-364add3510f4_banner2.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      }
+    ]
+  },
+  {
+    "id": "7b83ffa9-2849-4d18-85f8-d3dc204c67d2",
+    "title": "Galería Nocturna",
+    "description": "Exposición temporal con arte digital interactivo.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 180,
+    "category": "arte",
+    "venue": {
+      "id": "9ac21909-f5a9-4e17-8d0b-463d21c82eea",
+      "name": "Teatro Independencia",
+      "address": "Chile 1184",
+      "city": "Mendoza",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "f188b7ae-9fc9-4f4a-8de0-22d8d75a33e0",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/f188b7ae-9fc9-4f4a-8de0-22d8d75a33e0_banner15.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "92236129-e377-4979-8332-59d295e14a67",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/92236129-e377-4979-8332-59d295e14a67_banner4.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      }
+    ]
+  },
+  {
+    "id": "855a0cdf-641f-4a41-a672-b36fe24691c3",
+    "title": "Maratón de Poesía",
+    "description": "12 horas continuas de recitales poéticos.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 90,
+    "category": "literatura",
+    "venue": {
+      "id": "eaa442cb-95d7-455b-b65d-9d72c22f6228",
+      "name": "Predio Ferial Catamarca",
+      "address": "Av. Fiesta del Poncho S/N",
+      "city": "San Fernando del Valle de Catamarca",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "eefa39ff-b8f3-4486-b287-89ff25c63bf2",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/eefa39ff-b8f3-4486-b287-89ff25c63bf2_banner11.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "59a5c8f4-5d67-465d-86b4-3f27a8f8473c",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/59a5c8f4-5d67-465d-86b4-3f27a8f8473c_banner4.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "73778f98-93ce-47b2-98b5-6b8a9b3c1e09",
+    "title": "Tarde de Cuentacuentos",
+    "description": "Cuentos para toda la familia con música y teatro.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 60,
+    "category": "teatro",
+    "venue": {
+      "id": "eaa442cb-95d7-455b-b65d-9d72c22f6228",
+      "name": "Predio Ferial Catamarca",
+      "address": "Av. Fiesta del Poncho S/N",
+      "city": "San Fernando del Valle de Catamarca",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "b64500db-1595-4e3e-b8e4-12d841962804",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/b64500db-1595-4e3e-b8e4-12d841962804_banner14.jpg",
+        "isMain": true,
+        "isSecond": false,
+        "isAdditional": false
+      },
+      {
+        "id": "d6c84e98-3afa-4e70-bb0e-3e6bbf3d27e6",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/d6c84e98-3afa-4e70-bb0e-3e6bbf3d27e6_banner2.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "5496ef6c-66f5-47d7-a493-fc753569acca",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/5496ef6c-66f5-47d7-a493-fc753569acca_banner4.jpg",
+        "isMain": false,
+        "isSecond": false,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "2c630e36-8dab-4d53-95b9-ef4829742fff",
+    "title": "Ciclo de Cine Europeo",
+    "description": "Películas clásicas y contemporáneas del cine europeo.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 110,
+    "category": "cine",
+    "venue": {
+      "id": "eaa442cb-95d7-455b-b65d-9d72c22f6228",
+      "name": "Predio Ferial Catamarca",
+      "address": "Av. Fiesta del Poncho S/N",
+      "city": "San Fernando del Valle de Catamarca",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "8e02681b-9960-4166-b39b-b06583a6128f",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/8e02681b-9960-4166-b39b-b06583a6128f_banner2.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "3f7fcdab-bfeb-4be5-974f-282dbb0e0f25",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/3f7fcdab-bfeb-4be5-974f-282dbb0e0f25_banner8.jpg",
+        "isMain": false,
+        "isSecond": false,
+        "isAdditional": true
+      },
+      {
+        "id": "4e53c633-cd21-4ae4-ac95-e6414a503ee5",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/4e53c633-cd21-4ae4-ac95-e6414a503ee5_banner8.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "1172d564-84e3-4399-bab5-5762a96a0048",
+    "title": "Festival de Danzas del Mundo",
+    "description": "Presentaciones de diferentes culturas del planeta.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 400,
+    "category": "danza",
+    "venue": {
+      "id": "9ac21909-f5a9-4e17-8d0b-463d21c82eea",
+      "name": "Teatro Independencia",
+      "address": "Chile 1184",
+      "city": "Mendoza",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "ca264929-9e5a-4c88-a873-b28686c30160",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/ca264929-9e5a-4c88-a873-b28686c30160_banner3.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "b9ff8324-44ed-4e8b-bd12-9c87d44dc323",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/b9ff8324-44ed-4e8b-bd12-9c87d44dc323_banner7.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "09e58eb2-9eff-4291-b4ee-8bee5b020e57",
+    "title": "Concierto de Música Andina",
+    "description": "Presentación de grupos regionales con instrumentos tradicionales.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 220,
+    "category": "música",
+    "venue": {
+      "id": "eb4cedda-ff4d-45e2-ade3-4761d997f310",
+      "name": "Hipódromo de Palermo",
+      "address": "Av. del Libertador 4101",
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "fbddf031-2cf6-41c7-af87-dd3e34a46fe8",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/fbddf031-2cf6-41c7-af87-dd3e34a46fe8_banner4.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "508763cd-5b38-4fdc-a4e9-f091ebce30e0",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/508763cd-5b38-4fdc-a4e9-f091ebce30e0_banner3.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "34997ae7-ad98-4f4c-9557-33a68887f5c6",
+    "title": "Noche de Teatro Clásico",
+    "description": "Representación de obras de autores clásicos con escenografía moderna.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 130,
+    "category": "teatro",
+    "venue": {
+      "id": "f389184c-f6bb-44db-ad6a-594477b75fb0",
+      "name": "Centro Cultural Kirchner",
+      "address": "Sarmiento 151",
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "d5c96464-d022-40ae-ad7f-0fad191b177d",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/d5c96464-d022-40ae-ad7f-0fad191b177d_banner5.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "7f10adca-240e-4c70-902f-68230d649adc",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/7f10adca-240e-4c70-902f-68230d649adc_banner5.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "ffc46cea-e2d3-4d5a-8237-2159969c5ed4",
+    "title": "Taller de Cine Documental",
+    "description": "Aprende las bases del documental con cineastas invitados.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 50,
+    "category": "cine",
+    "venue": {
+      "id": "20bf84e3-ed70-42d4-abdc-5e3312cd04c9",
+      "name": "Auditorio Juan Victoria",
+      "address": "25 de Mayo 1215 Oeste",
+      "city": "San Juan",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "d897893f-c5d7-4680-b422-43256a5080f3",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/d897893f-c5d7-4680-b422-43256a5080f3_banner6.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "c26ce710-4824-49e2-8ecd-23021fd19713",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/c26ce710-4824-49e2-8ecd-23021fd19713_banner6.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "ef124a2f-b54c-45cf-a196-5e07590157dc",
+    "title": "Festival de Narración Oral",
+    "description": "Narradores de distintos países comparten historias tradicionales.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 100,
+    "category": "literatura",
+    "venue": {
+      "id": "ba9d9432-23c4-4a46-9ca8-f48fad130d85",
+      "name": "Teatro El Círculo",
+      "address": "Laprida 1223",
+      "city": "Rosario",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "b6e0e70b-62b7-495d-815b-ac473a791dc9",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/b6e0e70b-62b7-495d-815b-ac473a791dc9_banner7.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "8fe623ca-3027-44b7-8503-84077901bac4",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/8fe623ca-3027-44b7-8503-84077901bac4_banner10.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      },
+      {
+        "id": "b4c8df66-2572-4f78-bb0e-1f8ca5a418a4",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/b4c8df66-2572-4f78-bb0e-1f8ca5a418a4_banner10.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "f76692f5-f878-4040-9474-839962310816",
+    "title": "Concierto de Cámara Nocturno",
+    "description": "Presentación íntima con cuartetos de cuerda y piano.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 80,
+    "category": "música",
+    "venue": {
+      "id": "e79ade9b-e774-44cf-be28-c989d856ba34",
+      "name": "Orfeo Superdomo",
+      "address": "Cardeñosa 3450",
+      "city": "Córdoba",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "c43aead8-8ae0-4cf2-ae98-8414963de5d9",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/c43aead8-8ae0-4cf2-ae98-8414963de5d9_banner8.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "136b6edb-cff6-46ed-bc74-a30efb6a10d8",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/136b6edb-cff6-46ed-bc74-a30efb6a10d8_banner4.jpg",
+        "isMain": false,
+        "isSecond": false,
+        "isAdditional": true
+      }
+    ]
+  },
+  {
+    "id": "a898d793-0fe6-4281-a4e3-6f422b209093",
+    "title": "Espectáculo de Danza Contemporánea",
+    "description": "Obra de danza que fusiona lo urbano con lo clásico.",
+    "startTime": 1770880800000,
+    "endTime": 1823191200000,
+    "capacity": 180,
+    "category": "danza",
+    "venue": {
+      "id": "6205ef0f-9272-46f8-904a-7b4a25eba955",
+      "name": "Estadio Monumental",
+      "address": "Av. Figueroa Alcorta 7597",
+      "city": "Buenos Aires",
+      "country": "Argentina"
+    },
+    "banners": [
+      {
+        "id": "96003c46-8a62-40e7-9ae3-7a0c93229126",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/96003c46-8a62-40e7-9ae3-7a0c93229126_banner.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": false
+      },
+      {
+        "id": "ced83914-20e8-47f2-bf51-9a889e510d72",
+        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/ced83914-20e8-47f2-bf51-9a889e510d72_banner4.jpg",
+        "isMain": false,
+        "isSecond": true,
+        "isAdditional": true
+      }
+    ]
+  }
+]

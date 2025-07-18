@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import EventsPage from "./EventsPage"; // Adjust path
 import { vi } from "vitest";
-import { events } from "../../../../testSetup/mockdata/mockdata";
+import { events } from "../../../../testSetup/mockdata";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const fetchEvents = vi.fn().mockResolvedValue(events);
