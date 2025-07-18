@@ -6,10 +6,11 @@ import { oidcConfig } from "../../auth/oidcConfig";
 const Callback = () => {
   const navigate = useNavigate();
   const hasHandledCallback = useRef(false);
-  if (hasHandledCallback.current) return;
-  hasHandledCallback.current = true;
 
   useEffect(() => {
+    if (hasHandledCallback.current) return;
+    hasHandledCallback.current = true;
+
     new UserManager(oidcConfig)
       .signinRedirectCallback()
       .then(() => {
