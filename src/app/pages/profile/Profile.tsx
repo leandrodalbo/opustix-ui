@@ -2,6 +2,7 @@ import { useAuth } from "../../auth/AuthProvider";
 
 export default function Profile() {
   const { user, signinRedirect, signoutRedirect } = useAuth();
+
   return (
     <div
       className={`text-lg font-medium flex-1 flex justify-center items-center gap-6`}

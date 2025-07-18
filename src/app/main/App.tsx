@@ -2,7 +2,6 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
 import EventsPage from "../pages/events/EventsPage";
 import Profile from "../pages/profile/Profile";
-import Callback from "../pages/callback/Callback";
 import { ExistingUserPage } from "../rbac/ExistingUserPage";
 import Unauthorized from "../pages/unauthorized/Unauthorized";
 import EventsManagement from "../pages/events-management/EventsManagement";
@@ -19,7 +18,7 @@ export const App = () => {
           element={<EventsPage fetchEvents={fetchEvents} />}
         />
         <Route path="/login" element={<Profile />} />
-        <Route path="/callback" element={<Callback />} />
+
         <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/contacto" element={<Contact />} />
 
