@@ -1,0 +1,41 @@
+[
+  {
+    "id": "purchase_001",
+    "userInfo": "user_12345",
+    "totalPrice": 120.0,
+    "paymentStatus": "PENDING",
+    "expiresAt": 1724275200000,
+    "reservations": [
+      {
+        "id": "reservation_001",
+        "eventId": "event_001",
+        "ticketTypeId": "ticket_type_001",
+        "ticketTypeName": "General Admission",
+        "ticketTypePrice": 60.0,
+        "ticketTypeCurrency": "USD",
+        "price": 60.0,
+        "status": "RESERVED",
+        "sectorId": "sector_a",
+        "sectorName": "Main Floor",
+        "seatId": "seat_101",
+        "seatLabel": "A1",
+        "seatRowInfo": "Row A"
+      },
+      {
+        "id": "reservation_002",
+        "eventId": "event_001",
+        "ticketTypeId": "ticket_type_001",
+        "ticketTypeName": "General Admission",
+        "ticketTypePrice": 60.0,
+        "ticketTypeCurrency": "USD",
+        "price": 60.0,
+        "status": "RESERVED",
+        "sectorId": "sector_a",
+        "sectorName": "Main Floor",
+        "seatId": "seat_102",
+        "seatLabel": "A2",
+        "seatRowInfo": "Row A"
+      }
+    ]
+  }
+]

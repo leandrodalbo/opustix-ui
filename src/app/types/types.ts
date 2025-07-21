@@ -51,7 +51,7 @@ export interface EventSeat {
   sector?: EventSector | null;
 }
 
-export interface EventDetailsDto {
+export interface EventDetails {
   id: string;
   title: string;
   description?: string | null;
@@ -62,4 +62,35 @@ export interface EventDetailsDto {
   ticketTypes: TicketType[];
   sectors: EventSector[];
   seats: EventSeat[];
+}
+
+export interface NewReservation {
+  eventId: string;
+  ticketTypeId: string;
+  sectorId?: string;
+  seatId?: string;
+}
+export interface Reservation {
+  id: string;
+  eventId: string;
+  ticketTypeId: string;
+  ticketTypeName: string;
+  ticketTypePrice: number;
+  ticketTypeCurrency: string;
+  price: number;
+  status: string;
+  sectorId?: string;
+  sectorName?: string;
+  seatId?: string;
+  seatLabel?: string;
+  seatRowInfo?: string;
+}
+
+export interface Purchase {
+  id: string;
+  userInfo: string;
+  totalPrice: number;
+  paymentStatus: string;
+  expiresAt?: number;
+  reservations: Reservation[];
 }
