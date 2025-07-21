@@ -14,11 +14,20 @@ app.use(
 );
 
 const eventsFile = path.join(__dirname, "../data/eventsall.json");
+const eventDetailsFile = path.join(__dirname, "../data/eventdetails.json");
+
 const events = JSON.parse(readFileSync(eventsFile, "utf-8"));
 
 app.get("/api/public/ticketera/events/all", (req, res) => {
   res.json(events);
 });
+
+app.get(
+  "/api/public/ticketera/events/d5a1b3f0-1a4e-4bfa-a8b2-1234567890ab/details",
+  (req, res) => {
+    res.json(eventDetailsFile);
+  }
+);
 
 app.listen(port, () => {
   console.log(`API server listening at http://localhost:${port}`);

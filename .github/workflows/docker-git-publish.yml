@@ -54,4 +54,5 @@ jobs:
           --build-arg VITE_AUTHORITY_POST_LOGOUT_REDIRECT_URI=${{ secrets.VITE_AUTHORITY_POST_LOGOUT_REDIRECT_URI }}
           --build-arg VITE_AUTHORITY_RESPONSE_TYPE=${{ secrets.VITE_AUTHORITY_RESPONSE_TYPE }}
           --build-arg VITE_AUTHORITY_SCOPE=${{ secrets.VITE_AUTHORITY_SCOPE }}
+          --build-arg VITE_API_HOST=${{ secrets.VITE_API_HOST }}
           -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.VERSION }} .

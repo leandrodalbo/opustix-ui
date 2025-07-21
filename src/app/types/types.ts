@@ -25,3 +25,41 @@ export interface EventBanner {
   isSecond: boolean;
   isAdditional: boolean;
 }
+export interface TicketType {
+  id: string;
+  name: string;
+  price: number;
+  currency: string;
+  saleStart: number;
+  saleEnd: number;
+  description: string;
+}
+
+export interface EventSector {
+  id: string;
+  name: string;
+  description?: string | null;
+  priceAddition?: number | null;
+}
+
+export interface EventSeat {
+  id: string;
+  label: string;
+  seatRowInfo?: string | null;
+  seatNumber?: string | null;
+  priceAddition?: number | null;
+  sector?: EventSector | null;
+}
+
+export interface EventDetailsDto {
+  id: string;
+  title: string;
+  description?: string | null;
+  startTime: number;
+  endTime: number;
+  capacity: number;
+  venueDto: Venue;
+  ticketTypes: TicketType[];
+  sectors: EventSector[];
+  seats: EventSeat[];
+}

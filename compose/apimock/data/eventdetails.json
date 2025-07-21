@@ -1,0 +1,77 @@
+{
+  "id": "d5a1b3f0-1a4e-4bfa-a8b2-1234567890ab",
+  "title": "Jazz Night 2025",
+  "description": "An unforgettable night of live jazz performances featuring international artists.",
+  "startTime": 1753123200000,
+  "endTime": 1753130400000,
+  "capacity": 500,
+  "venueDto": {
+    "id": "3e82b573-8c2d-4d5a-9eae-12abcde34567",
+    "name": "Grand Music Hall",
+    "address": "123 Symphony Avenue",
+    "city": "New York",
+    "country": "USA"
+  },
+  "ticketTypes": [
+    {
+      "id": "f2137fa2-1b59-4127-9c5d-aabbccddeeff",
+      "name": "General Admission",
+      "price": 49.99,
+      "currency": "USD",
+      "saleStart": 1750531200000,
+      "saleEnd": 1753046400000,
+      "description": "Access to all main stage performances."
+    },
+    {
+      "id": "f2137fa2-1b59-4127-9c5d-aabbccddeef0",
+      "name": "VIP",
+      "price": 129.99,
+      "currency": "USD",
+      "saleStart": 1750531200000,
+      "saleEnd": 1753046400000,
+      "description": "Includes front row seats and backstage access."
+    }
+  ],
+  "sectors": [
+    {
+      "id": "e81db180-2353-42de-8fc2-b3a9381db8e1",
+      "name": "Front Row",
+      "description": "Closest to the stage with premium view.",
+      "priceAddition": 30.0
+    },
+    {
+      "id": "84c65942-6468-4eaf-8413-64f8a5368f90",
+      "name": "Balcony",
+      "description": "Elevated view with a clear line of sight.",
+      "priceAddition": 10.0
+    }
+  ],
+  "seats": [
+    {
+      "id": "7f8342b2-6870-4aef-a129-112233445566",
+      "label": "A1",
+      "seatRowInfo": "A",
+      "seatNumber": "1",
+      "priceAddition": 5.0,
+      "sector": {
+        "id": "e81db180-2353-42de-8fc2-b3a9381db8e1",
+        "name": "Front Row",
+        "description": "Closest to the stage with premium view.",
+        "priceAddition": 30.0
+      }
+    },
+    {
+      "id": "8a2bb7d6-5fcb-41fc-9d3c-77889900aabb",
+      "label": "B2",
+      "seatRowInfo": "B",
+      "seatNumber": "2",
+      "priceAddition": 0.0,
+      "sector": {
+        "id": "84c65942-6468-4eaf-8413-64f8a5368f90",
+        "name": "Balcony",
+        "description": "Elevated view with a clear line of sight.",
+        "priceAddition": 10.0
+      }
+    }
+  ]
+}
