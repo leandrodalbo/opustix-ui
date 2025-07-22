@@ -2,18 +2,27 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { EventsMaterialGrid } from "./EventsMaterialGrid"; // Adjust import path
 import { events } from "../../../../testSetup/mockdata";
+import { MemoryRouter } from "react-router-dom";
 
 import { fromUnixTime } from "date-fns";
 
 describe("EventsMaterialGrid", () => {
   it("renders the correct number of event cards", () => {
-    render(<EventsMaterialGrid events={events} />);
+    render(
+      <MemoryRouter>
+        <EventsMaterialGrid events={events} />
+      </MemoryRouter>
+    );
     const titles = screen.getAllByRole("heading", { level: 6 });
     expect(titles).toHaveLength(events.length);
   });
 
   it("displays event titles, categories, venues, and dates", () => {
-    render(<EventsMaterialGrid events={[events[0]]} />);
+    render(
+      <MemoryRouter>
+        <EventsMaterialGrid events={[events[0]]} />
+      </MemoryRouter>
+    );
 
     expect(screen.getByText(events[0].title)).toBeInTheDocument();
     expect(
@@ -34,7 +43,12 @@ describe("EventsMaterialGrid", () => {
   });
 
   it("displays event banner images", () => {
-    render(<EventsMaterialGrid events={events} />);
+    render(
+      <MemoryRouter>
+        <EventsMaterialGrid events={events} />
+      </MemoryRouter>
+    );
+
     const images = screen.getAllByRole("img");
 
     expect(images).toHaveLength(events.length);

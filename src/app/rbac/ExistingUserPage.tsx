@@ -8,7 +8,7 @@ interface ExistingUserPageProps {
 
 export const ExistingUserPage = ({
   children,
-  roles = ["USER"],
+  roles = [],
 }: ExistingUserPageProps) => {
   const { user, isLoading } = useAuth();
 
@@ -20,6 +20,8 @@ export const ExistingUserPage = ({
     | undefined;
 
   const userRoles: string[] = realmAccess?.roles || [];
+
+  if (roles.length === 0) return children;
 
   if (!roles.some((r) => userRoles.includes(r)))
     return <Navigate to="/unauthorized" replace />;

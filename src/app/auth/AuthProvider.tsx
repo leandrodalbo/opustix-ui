@@ -8,7 +8,7 @@ import {
 import { UserManager, User } from "oidc-client-ts";
 import { oidcConfig } from "./oidcConfig";
 
-const userManager = new UserManager(oidcConfig);
+export const userManager = new UserManager(oidcConfig);
 
 interface AuthContextProps {
   user: User | null;

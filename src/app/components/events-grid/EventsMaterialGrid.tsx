@@ -7,6 +7,7 @@ import {
   Typography,
   Button,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import { fromUnixTime } from "date-fns";
 import { Event } from "../../types/types";
@@ -16,6 +17,7 @@ interface EventsMaterialGridProps {
 }
 
 export const EventsMaterialGrid = ({ events }: EventsMaterialGridProps) => {
+  const navigate = useNavigate();
   return (
     <Grid
       container
@@ -70,11 +72,7 @@ export const EventsMaterialGrid = ({ events }: EventsMaterialGridProps) => {
                       backgroundColor: "#388e3c",
                     },
                   }}
-                  onClick={() =>
-                    console.log(
-                      `Comprar entrada para el evento: ${event.title}`
-                    )
-                  }
+                  onClick={() => navigate(`/buy?eventId=${event.id}`)}
                 >
                   COMPRAR
                 </Button>

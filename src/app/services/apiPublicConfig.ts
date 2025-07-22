@@ -2,11 +2,11 @@ import axios from "axios";
 
 const apiHost = import.meta.env.VITE_API_HOST;
 
-const apiFetch = axios.create({
-  baseURL: apiHost,
+const apiPublicFetch = axios.create({
+  baseURL: `${apiHost}/api/public/ticketera`,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
-export default apiFetch;
+export default apiPublicFetch;
