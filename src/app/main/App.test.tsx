@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { App } from "./App";
 import { vi } from "vitest";
-import { events } from "../../../testSetup/mockdata";
+import { events, eventdetails, purchase } from "../../../testSetup/mockdata";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const createTestQueryClient = () =>
@@ -36,7 +36,17 @@ vi.mock("../services/events", () => ({
   fetchEvents: vi.fn(() => {
     return events;
   }),
+
+  fetchEventDetails: vi.fn(() => {
+    return eventdetails;
+  }),
 }));
+
+vi.mock("../services/reservations", async () => {
+  return {
+    default: vi.fn(() => purchase),
+  };
+});
 
 describe("App Routing", () => {
   it("renders Home component on / route", async () => {
@@ -75,5 +85,10 @@ describe("App Routing", () => {
   it("renders Contact component on /contacto route", () => {
     appRender("/contacto", <App />);
     expect(screen.getByText(/📞 Contacta con nosotros/i)).toBeInTheDocument();
+  });
+
+  it("renders Reservations Component", () => {
+    appRender(`/buy?eventId=${events[0].id}`, <App />);
+    expect(screen.getByText(/Loading/i)).toBeInTheDocument();
   });
 });

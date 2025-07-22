@@ -8,7 +8,7 @@ export const fetchEvents = async (): Promise<Event[]> => {
   return response.data;
 };
 
-export const fetchEventsDetails = async (
+export const fetchEventDetails = async (
   eventId: string
 ): Promise<EventDetails> => {
   const response = await apiPrivateFetch.get<EventDetails>(
