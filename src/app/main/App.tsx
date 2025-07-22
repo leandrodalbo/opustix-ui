@@ -5,8 +5,10 @@ import Profile from "../pages/profile/Profile";
 import { ExistingUserPage } from "../rbac/ExistingUserPage";
 import Unauthorized from "../pages/unauthorized/Unauthorized";
 import EventsManagement from "../pages/events-management/EventsManagement";
-import { fetchEvents } from "../services/events";
+import { fetchEvents, fetchEventsDetails } from "../services/events";
 import Contact from "../pages/contact/Contact";
+import Reservations from "../components/make-reservations/reservations/Reservations";
+import postReservations from "../services/reservations";
 
 export const App = () => {
   return (
@@ -18,7 +20,17 @@ export const App = () => {
           element={<EventsPage fetchEvents={fetchEvents} />}
         />
         <Route path="/login" element={<Profile />} />
-
+        <Route
+          path="/buy"
+          element={
+            <ExistingUserPage roles={["USER"]}>
+              <Reservations
+                fetchEventsDetails={fetchEventsDetails}
+                postReservations={postReservations}
+              />
+            </ExistingUserPage>
+          }
+        />
         <Route path="/unauthorized" element={<Unauthorized />} />
         <Route path="/contacto" element={<Contact />} />
 

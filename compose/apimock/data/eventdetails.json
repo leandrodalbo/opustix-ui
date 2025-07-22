@@ -52,13 +52,7 @@
       "label": "A1",
       "seatRowInfo": "A",
       "seatNumber": "1",
-      "priceAddition": 5.0,
-      "sector": {
-        "id": "e81db180-2353-42de-8fc2-b3a9381db8e1",
-        "name": "Front Row",
-        "description": "Closest to the stage with premium view.",
-        "priceAddition": 30.0
-      }
+      "priceAddition": 5.0
     },
     {
       "id": "8a2bb7d6-5fcb-41fc-9d3c-77889900aabb",

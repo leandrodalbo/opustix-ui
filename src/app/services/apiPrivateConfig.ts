@@ -4,8 +4,10 @@ import { oidcConfig } from "../auth/oidcConfig";
 
 const userManager = new UserManager(oidcConfig);
 
+const apiHost = import.meta.env.VITE_API_HOST;
+
 const apiPrivateFetch = axios.create({
-  baseURL: "/api/private/ticketera",
+  baseURL: `${apiHost}/api/private/ticketera`,
   headers: {
     "Content-Type": "application/json",
   },
