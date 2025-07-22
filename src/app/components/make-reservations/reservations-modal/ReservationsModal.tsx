@@ -55,8 +55,11 @@ const ReservationModal = ({
         <h2 className="text-2xl font-semibold mb-6">Reserva</h2>
 
         <div className="mb-5">
-          <label className="block mb-1 font-medium">Ticket</label>
+          <label htmlFor="ticket" className="block mb-1 font-medium">
+            Ticket
+          </label>
           <select
+            id="ticket"
             className="w-full bg-darkText text-darkerText rounded border border-secondary-border p-3 focus:outline-none focus:ring-2 focus:ring-secondary-hover"
             value={form.ticketTypeId}
             onChange={(e) => handleChange({ ticketTypeId: e.target.value })}
@@ -71,8 +74,11 @@ const ReservationModal = ({
 
         {event.sectors.length > 0 && (
           <div className="mb-5">
-            <label className="block mb-1 font-medium">Sector</label>
+            <label htmlFor="sector" className="block mb-1 font-medium">
+              Sector
+            </label>
             <select
+              id="sector"
               className="w-full bg-darkText text-darkerText rounded border border-secondary-border p-3 focus:outline-none focus:ring-2 focus:ring-secondary-hover"
               value={form.sectorId || ""}
               onChange={(e) =>
@@ -94,8 +100,11 @@ const ReservationModal = ({
 
         {filteredSeats.length > 0 && (
           <div className="mb-6">
-            <label className="block mb-1 font-medium">Asiento</label>
+            <label htmlFor="seat" className="block mb-1 font-medium">
+              Asiento
+            </label>
             <select
+              id="seat"
               className="w-full bg-darkText text-darkerText rounded border border-secondary-border p-3 focus:outline-none focus:ring-2 focus:ring-secondary-hover"
               value={form.seatId || ""}
               onChange={(e) =>
