@@ -1,71 +1,76 @@
 {
-  "id": "d5a1b3f0-1a4e-4bfa-a8b2-1234567890ab",
-  "title": "Jazz Night 2025",
-  "description": "An unforgettable night of live jazz performances featuring international artists.",
-  "startTime": 1753123200000,
-  "endTime": 1753130400000,
-  "capacity": 500,
+  "id": "aabc1234-5678-90ab-cdef-1234567890ab",
+  "title": "Summer Music Festival 2025",
+  "description": "Join us for an unforgettable night of music, lights, and fun featuring top artists from around the world.",
+  "startTime": 1770880800000,
+  "endTime": 1823191200000,
+  "capacity": 5000,
+  "mainBanner": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/dd2948bc-7f15-4014-a42f-e131b5b575d5_banner9.jpg",
   "venueDto": {
-    "id": "3e82b573-8c2d-4d5a-9eae-12abcde34567",
-    "name": "Grand Music Hall",
-    "address": "123 Symphony Avenue",
-    "city": "New York",
+    "id": "aabc1234-5678-90ab-cdef-1234567890cd",
+    "name": "Downtown Arena",
+    "address": "123 Main Street, Cityville",
+    "city": "Cityville",
     "country": "USA"
   },
   "ticketTypes": [
     {
-      "id": "f2137fa2-1b59-4127-9c5d-aabbccddeeff",
-      "name": "General Admission",
-      "price": 49.99,
+      "id": "fsdv345g-6789-0abc-def1-234567890abc",
+      "name": "VIP Ticket",
+      "price": 150,
       "currency": "USD",
-      "saleStart": 1750531200000,
-      "saleEnd": 1753046400000,
-      "description": "Access to all main stage performances."
+      "saleStart": 1770880800000,
+      "saleEnd": 1823191200000,
+      "description": "Access to VIP area, free drinks, and meet-and-greet with performers."
     },
     {
-      "id": "f2137fa2-1b59-4127-9c5d-aabbccddeef0",
-      "name": "VIP",
-      "price": 129.99,
+      "id": "afgh34sdf-5678-90ab-cdef-1234567890ef",
+      "name": "General Admission",
+      "price": 50,
       "currency": "USD",
-      "saleStart": 1750531200000,
-      "saleEnd": 1753046400000,
-      "description": "Includes front row seats and backstage access."
+      "saleStart": 1770880800000,
+      "saleEnd": 1823191200000,
+      "description": "Access to general admission standing area."
     }
   ],
   "sectors": [
     {
-      "id": "e81db180-2353-42de-8fc2-b3a9381db8e1",
-      "name": "Front Row",
-      "description": "Closest to the stage with premium view.",
-      "priceAddition": 30.0
+      "id": "agfsrhg-1234-5678-90ab-cdef12345678",
+      "name": "VIP Area",
+      "description": "Front stage access with premium seating",
+      "ticketTypeId": "fsdv345g-6789-0abc-def1-234567890abc"
     },
     {
-      "id": "84c65942-6468-4eaf-8413-64f8a5368f90",
-      "name": "Balcony",
-      "description": "Elevated view with a clear line of sight.",
-      "priceAddition": 10.0
+      "id": "fjk4wer-5678-90ab-cdef-1234567890gh",
+      "name": "General Standing",
+      "description": null,
+      "ticketTypeId": "afgh34sdf-5678-90ab-cdef-1234567890ef"
     }
   ],
   "seats": [
     {
-      "id": "7f8342b2-6870-4aef-a129-112233445566",
+      "id": "dfgj567g-1234-5678-90ab-cdef12345678",
       "label": "A1",
-      "seatRowInfo": "A",
       "seatNumber": "1",
-      "priceAddition": 5.0
+      "sectorId": "fjk4wer-5678-90ab-cdef-1234567890gh"
     },
     {
-      "id": "8a2bb7d6-5fcb-41fc-9d3c-77889900aabb",
-      "label": "B2",
-      "seatRowInfo": "B",
+      "id": "fgjk4as-5678-90ab-cdef-1234567890ab",
+      "label": "A2",
       "seatNumber": "2",
-      "priceAddition": 0.0,
-      "sector": {
-        "id": "84c65942-6468-4eaf-8413-64f8a5368f90",
-        "name": "Balcony",
-        "description": "Elevated view with a clear line of sight.",
-        "priceAddition": 10.0
-      }
+      "sectorId": "fjk4wer-5678-90ab-cdef-1234567890gh"
+    },
+    {
+      "id": "hg8kj4as-1234-5678-90ab-cdef12345678",
+      "label": "Standing-1",
+      "seatNumber": null,
+      "sectorId": "agfsrhg-1234-5678-90ab-cdef12345678"
+    },
+    {
+      "id": "yikr4as-5678-90ab-cdef-1234567890cd",
+      "label": "Standing-2",
+      "seatNumber": null,
+      "sectorId": "agfsrhg-1234-5678-90ab-cdef12345678"
     }
   ]
 }

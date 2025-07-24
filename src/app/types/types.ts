@@ -39,16 +39,14 @@ export interface EventSector {
   id: string;
   name: string;
   description?: string | null;
-  priceAddition?: number | null;
+  ticketTypeId: string;
 }
 
 export interface EventSeat {
   id: string;
   label: string;
-  seatRowInfo?: string | null;
   seatNumber?: string | null;
-  priceAddition?: number | null;
-  sector?: EventSector | null;
+  sectorId: string;
 }
 
 export interface EventDetails {
@@ -58,6 +56,7 @@ export interface EventDetails {
   startTime: number;
   endTime: number;
   capacity: number;
+  mainBanner: string;
   venueDto: Venue;
   ticketTypes: TicketType[];
   sectors: EventSector[];
@@ -67,8 +66,8 @@ export interface EventDetails {
 export interface NewReservation {
   eventId: string;
   ticketTypeId: string;
-  sectorId?: string;
-  seatId?: string;
+  sectorId?: string | null;
+  seatId?: string | null;
 }
 export interface Reservation {
   id: string;
@@ -83,7 +82,6 @@ export interface Reservation {
   sectorName?: string;
   seatId?: string;
   seatLabel?: string;
-  seatRowInfo?: string;
 }
 
 export interface Purchase {
