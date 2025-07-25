@@ -40,16 +40,16 @@ const ReservationsSummary = ({
               className="flex flex-col md:flex-row md:items-center md:justify-between bg-lightBg p-3 rounded-lg text-black"
             >
               <div className="space-y-1">
-                <p className="font-medium">
+                <p className="font-medium" data-testid="reservation-ticket">
                   <b>Ticket:</b> {ticket?.name} - ${ticket?.price.toFixed(2)}
                 </p>
                 {sector?.name && (
-                  <p>
+                  <p data-testid={`reservation-sector-${sector.id}`}>
                     <b>Sector:</b> {sector.name}
                   </p>
                 )}
                 {seat?.label && (
-                  <p>
+                  <p data-testid={`reservation-sector-${seat.id}`}>
                     <b>Asiento:</b> {seat.label}
                   </p>
                 )}
