@@ -77,6 +77,7 @@ const ReservationsSelector = ({
             setSeatError(null);
           }}
           className="w-full rounded-lg p-2 bg-lightBg text-black"
+          data-testid="ticket-select"
         >
           <option value="">Elige un ticket</option>
           {eventDetails.ticketTypes.map((t) => (
@@ -103,6 +104,7 @@ const ReservationsSelector = ({
               setSeatError(null);
             }}
             className="w-full rounded-lg p-2 bg-lightBg text-black"
+            data-testid="sector-select"
           >
             <option value="">Elige un Sector</option>
             {filteredSectors.map((s) => (
@@ -129,6 +131,7 @@ const ReservationsSelector = ({
               setSeatError(null);
             }}
             className="w-full rounded-lg p-2 bg-lightBg text-black"
+            data-testid="seats-select"
           >
             <option value="">Elige un Asiento</option>
             {filteredSeats.map((s) => (
@@ -146,6 +149,7 @@ const ReservationsSelector = ({
       <button
         className="w-full mt-2 bg-secondary hover:bg-secondary-hover text-black"
         onClick={handleAdd}
+        data-testid="add-reservations"
       >
         Agregar Reserva
       </button>

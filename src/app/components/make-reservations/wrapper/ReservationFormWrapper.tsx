@@ -28,14 +28,14 @@ const ReservationFormWrapper = ({
     <div className="max-w-4xl mx-auto p-4 text-white">
       <EventInfo eventDetails={eventDetails} />
 
-      <div className="mt-6">
+      <div className="mt-6" data-testid="reservations-selector">
         <ReservationsSelector
           eventDetails={eventDetails}
           addReservation={addReservation}
         />
       </div>
 
-      <div className="mt-6">
+      <div className="mt-6" data-testid="reservations-summary">
         <ReservationsSummary
           reservations={reservations}
           eventDetails={eventDetails}
