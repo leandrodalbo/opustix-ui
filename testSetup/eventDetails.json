@@ -5,7 +5,7 @@
   "startTime": 1770880800000,
   "endTime": 1823191200000,
   "capacity": 5000,
-  "mainBanner": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/dd2948bc-7f15-4014-a42f-e131b5b575d5_banner9.jpg",
+  "mainBanner": "test-banner",
   "venueDto": {
     "id": "aabc1234-5678-90ab-cdef-1234567890cd",
     "name": "Downtown Arena",

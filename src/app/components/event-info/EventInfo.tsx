@@ -2,6 +2,7 @@ import { fromUnixTime } from "date-fns";
 import { format } from "date-fns";
 import { es } from "date-fns/locale";
 import { EventDetails } from "../../types/types";
+import imgService from "../../services/imgService";
 
 interface EventInfoProps {
   eventDetails: EventDetails;
@@ -23,7 +24,7 @@ const EventInfo = ({ eventDetails }: EventInfoProps) => {
   return (
     <div className="bg-darkBg rounded-2xl shadow-md p-4 text-lightText">
       <img
-        src={eventDetails.mainBanner}
+        src={imgService(eventDetails.mainBanner, true)}
         alt={eventDetails.title}
         className="w-full object-cover rounded-xl max-h-72 mb-4"
       />

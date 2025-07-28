@@ -17,14 +17,14 @@
     "banners": [
       {
         "id": "dd2948bc-7f15-4014-a42f-e131b5b575d5",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/dd2948bc-7f15-4014-a42f-e131b5b575d5_banner9.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "8b842c78-a2c8-451d-b2db-cbce072a789c",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/8b842c78-a2c8-451d-b2db-cbce072a789c_banner2.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
@@ -49,14 +49,14 @@
     "banners": [
       {
         "id": "505e1b58-b19e-468d-aa86-526b9288218d",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/505e1b58-b19e-468d-aa86-526b9288218d_banner9.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "e53103c3-4559-459a-afb3-c06c0b47e405",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/e53103c3-4559-459a-afb3-c06c0b47e405_banner2.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
@@ -81,14 +81,14 @@
     "banners": [
       {
         "id": "5af61f5c-5b32-4431-8d10-da2b69c8b299",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/5af61f5c-5b32-4431-8d10-da2b69c8b299_banner13.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "7d96bc01-b79a-4b8b-a3bf-00d864ab5d2a",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/7d96bc01-b79a-4b8b-a3bf-00d864ab5d2a_banner3.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
@@ -113,14 +113,14 @@
     "banners": [
       {
         "id": "29a69f22-f8ad-4b8c-ae3e-d395b90fd6a6",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/29a69f22-f8ad-4b8c-ae3e-d395b90fd6a6_banner14.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "bc3c3bdc-ac70-4cdf-a978-95c9ec63b23e",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/bc3c3bdc-ac70-4cdf-a978-95c9ec63b23e_banner3.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
@@ -145,14 +145,14 @@
     "banners": [
       {
         "id": "c3d210c5-6ff9-4543-925c-5ad0d5274791",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/c3d210c5-6ff9-4543-925c-5ad0d5274791_favacard.png",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "5735169d-33bd-4b0a-b0f2-3c434b90b15c",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/5735169d-33bd-4b0a-b0f2-3c434b90b15c_banner5.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
@@ -177,14 +177,14 @@
     "banners": [
       {
         "id": "a4dc371d-0ccf-4a5a-8ee0-a12e6f8ee155",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/a4dc371d-0ccf-4a5a-8ee0-a12e6f8ee155_naranjax_banner.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "8194bdbb-04b4-4b73-86af-ae757edbf125",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/8194bdbb-04b4-4b73-86af-ae757edbf125_banner7.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
@@ -209,14 +209,14 @@
     "banners": [
       {
         "id": "41776dfa-668a-4615-aa84-c110f49eb121",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/41776dfa-668a-4615-aa84-c110f49eb121_banner16.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "a06f1332-5d59-427e-bc48-364add3510f4",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/a06f1332-5d59-427e-bc48-364add3510f4_banner2.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
@@ -241,14 +241,14 @@
     "banners": [
       {
         "id": "f188b7ae-9fc9-4f4a-8de0-22d8d75a33e0",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/f188b7ae-9fc9-4f4a-8de0-22d8d75a33e0_banner15.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "92236129-e377-4979-8332-59d295e14a67",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/92236129-e377-4979-8332-59d295e14a67_banner4.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
@@ -273,14 +273,14 @@
     "banners": [
       {
         "id": "eefa39ff-b8f3-4486-b287-89ff25c63bf2",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/eefa39ff-b8f3-4486-b287-89ff25c63bf2_banner11.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "59a5c8f4-5d67-465d-86b4-3f27a8f8473c",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/59a5c8f4-5d67-465d-86b4-3f27a8f8473c_banner4.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true
@@ -305,21 +305,21 @@
     "banners": [
       {
         "id": "b64500db-1595-4e3e-b8e4-12d841962804",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/b64500db-1595-4e3e-b8e4-12d841962804_banner14.jpg",
+        "imageUrl": "test-banner",
         "isMain": true,
         "isSecond": false,
         "isAdditional": false
       },
       {
         "id": "d6c84e98-3afa-4e70-bb0e-3e6bbf3d27e6",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/d6c84e98-3afa-4e70-bb0e-3e6bbf3d27e6_banner2.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "5496ef6c-66f5-47d7-a493-fc753569acca",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/5496ef6c-66f5-47d7-a493-fc753569acca_banner4.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": false,
         "isAdditional": true
@@ -344,21 +344,21 @@
     "banners": [
       {
         "id": "8e02681b-9960-4166-b39b-b06583a6128f",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/8e02681b-9960-4166-b39b-b06583a6128f_banner2.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "3f7fcdab-bfeb-4be5-974f-282dbb0e0f25",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/3f7fcdab-bfeb-4be5-974f-282dbb0e0f25_banner8.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": false,
         "isAdditional": true
       },
       {
         "id": "4e53c633-cd21-4ae4-ac95-e6414a503ee5",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/4e53c633-cd21-4ae4-ac95-e6414a503ee5_banner8.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true
@@ -383,14 +383,14 @@
     "banners": [
       {
         "id": "ca264929-9e5a-4c88-a873-b28686c30160",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/ca264929-9e5a-4c88-a873-b28686c30160_banner3.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "b9ff8324-44ed-4e8b-bd12-9c87d44dc323",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/b9ff8324-44ed-4e8b-bd12-9c87d44dc323_banner7.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true
@@ -415,14 +415,14 @@
     "banners": [
       {
         "id": "fbddf031-2cf6-41c7-af87-dd3e34a46fe8",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/fbddf031-2cf6-41c7-af87-dd3e34a46fe8_banner4.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "508763cd-5b38-4fdc-a4e9-f091ebce30e0",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/508763cd-5b38-4fdc-a4e9-f091ebce30e0_banner3.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true
@@ -447,14 +447,14 @@
     "banners": [
       {
         "id": "d5c96464-d022-40ae-ad7f-0fad191b177d",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/d5c96464-d022-40ae-ad7f-0fad191b177d_banner5.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "7f10adca-240e-4c70-902f-68230d649adc",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/7f10adca-240e-4c70-902f-68230d649adc_banner5.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true
@@ -479,14 +479,14 @@
     "banners": [
       {
         "id": "d897893f-c5d7-4680-b422-43256a5080f3",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/d897893f-c5d7-4680-b422-43256a5080f3_banner6.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "c26ce710-4824-49e2-8ecd-23021fd19713",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/c26ce710-4824-49e2-8ecd-23021fd19713_banner6.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true
@@ -511,21 +511,21 @@
     "banners": [
       {
         "id": "b6e0e70b-62b7-495d-815b-ac473a791dc9",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/b6e0e70b-62b7-495d-815b-ac473a791dc9_banner7.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "8fe623ca-3027-44b7-8503-84077901bac4",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/8fe623ca-3027-44b7-8503-84077901bac4_banner10.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true
       },
       {
         "id": "b4c8df66-2572-4f78-bb0e-1f8ca5a418a4",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/b4c8df66-2572-4f78-bb0e-1f8ca5a418a4_banner10.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true
@@ -550,14 +550,14 @@
     "banners": [
       {
         "id": "c43aead8-8ae0-4cf2-ae98-8414963de5d9",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/c43aead8-8ae0-4cf2-ae98-8414963de5d9_banner8.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "136b6edb-cff6-46ed-bc74-a30efb6a10d8",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/136b6edb-cff6-46ed-bc74-a30efb6a10d8_banner4.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": false,
         "isAdditional": true
@@ -582,14 +582,14 @@
     "banners": [
       {
         "id": "96003c46-8a62-40e7-9ae3-7a0c93229126",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/96003c46-8a62-40e7-9ae3-7a0c93229126_banner.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": false
       },
       {
         "id": "ced83914-20e8-47f2-bf51-9a889e510d72",
-        "imageUrl": "https://mvp-banners-bucket-dev.s3.amazonaws.com/banners/ced83914-20e8-47f2-bf51-9a889e510d72_banner4.jpg",
+        "imageUrl": "test-banner",
         "isMain": false,
         "isSecond": true,
         "isAdditional": true

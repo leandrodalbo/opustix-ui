@@ -1,7 +1,9 @@
 import { Event } from "../../types/types";
+import imgService from "../../services/imgService";
 
 type EventsThumbnailGridProps = {
   events: Event[];
+  imgService: (url: string, isMain?: boolean) => string;
 };
 
 export const EventsThumbnailGrid = ({ events }: EventsThumbnailGridProps) => {
@@ -21,7 +23,10 @@ export const EventsThumbnailGrid = ({ events }: EventsThumbnailGridProps) => {
             className="bg-gray-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
           >
             <img
-              src={event.thumbnail?.imageUrl}
+              src={imgService(
+                event.thumbnail?.imageUrl || "test-banner",
+                false
+              )}
               alt={`thumbnail-${event.id}`}
               className="w-full h-48 object-cover"
             />

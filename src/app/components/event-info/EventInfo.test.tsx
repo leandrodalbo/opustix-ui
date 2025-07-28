@@ -5,6 +5,7 @@ import { EventDetails } from "../../types/types";
 import { format, fromUnixTime } from "date-fns";
 import { es } from "date-fns/locale";
 import { eventdetails } from "../../../../testSetup/mockdata";
+import imgService from "../../services/imgService";
 
 const mockEvent: EventDetails = eventdetails;
 
@@ -14,7 +15,10 @@ describe("EventInfo", () => {
 
     const image = screen.getByAltText(mockEvent.title);
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute("src", mockEvent.mainBanner);
+    expect(image).toHaveAttribute(
+      "src",
+      imgService(mockEvent.mainBanner, true)
+    );
     expect(screen.getByText(mockEvent.title)).toBeInTheDocument();
     expect(screen.getByText(mockEvent.description)).toBeInTheDocument();
 
