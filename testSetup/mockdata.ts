@@ -2,20 +2,11 @@ import { Event, EventDetails, Purchase } from "../src/app/types/types";
 import { readFileSync } from "fs";
 import path from "path";
 
-const eventsAllFile = path.join(
-  __dirname,
-  "../compose/apimock/data/eventsall.json"
-);
+const eventsAllFile = path.join(__dirname, "./eventsAll.json");
 
-const eventsDetailsFile = path.join(
-  __dirname,
-  "../compose/apimock/data/eventdetails.json"
-);
+const eventsDetailsFile = path.join(__dirname, "./eventDetails.json");
 
-const purchaseFile = path.join(
-  __dirname,
-  "../compose/apimock/data/purchase.json"
-);
+const purchaseFile = path.join(__dirname, "./purchase.json");
 
 export const events: Event[] = JSON.parse(readFileSync(eventsAllFile, "utf-8"));
 

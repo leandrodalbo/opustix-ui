@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 
 import { fromUnixTime } from "date-fns";
 import { Event } from "../../types/types";
+import imgService from "../../services/imgService";
 
 interface EventsMaterialGridProps {
   events: Event[];
@@ -35,7 +36,7 @@ export const EventsMaterialGrid = ({ events }: EventsMaterialGridProps) => {
             <Card
               sx={{
                 width: 260,
-                height: 480,
+                height: 500,
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between",
@@ -44,7 +45,7 @@ export const EventsMaterialGrid = ({ events }: EventsMaterialGridProps) => {
               <CardMedia
                 component="img"
                 sx={{ height: 260, width: "100%", objectFit: "cover" }}
-                image={banner?.imageUrl}
+                image={imgService(banner?.imageUrl || "test-banner", false)}
                 alt={event.title}
               />
               <CardContent sx={{ flexGrow: 1 }}>
@@ -62,7 +63,7 @@ export const EventsMaterialGrid = ({ events }: EventsMaterialGridProps) => {
                   {fromUnixTime(event.endTime).toLocaleDateString("es-ES")}
                 </Typography>
               </CardContent>
-              <Box textAlign="center" mb={2}>
+              <Box textAlign="center" mb={4}>
                 <Button
                   variant="contained"
                   sx={{
