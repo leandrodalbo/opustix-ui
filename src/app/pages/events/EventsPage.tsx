@@ -75,7 +75,7 @@ export default function EventsPage({ fetchEvents }: EventsPageProps) {
     );
 
   return (
-    <div className="w-full mx-auto px-12 py-12">
+    <div className="w-full mx-auto px-12 py-12 flex-1">
       <EventFilters
         eventTitle={eventTitle}
         setEvenTitle={setEventTitle}

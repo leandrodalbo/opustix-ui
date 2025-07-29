@@ -7,7 +7,7 @@ interface EventsGridProps {
 
 export const EventsGrid = ({ events }: EventsGridProps) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-4 gap-8">
+    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 w-full">
       {events.length === 0 && (
         <p className="bg-brand-danger text-center col-span-full py-4 rounded">
           No se econtraron eventos.
