@@ -63,9 +63,9 @@ const ReservationsSelector = ({
   };
 
   return (
-    <div className="bg-darkBg p-4 rounded-xl space-y-4">
+    <div className="bg-brand-card p-4 rounded-xl space-y-4">
       <div>
-        <label className="block text-white mb-1">Ticket</label>
+        <label className="block text-brand-white mb-1">Ticket</label>
         <select
           value={ticketTypeId}
           onChange={(e) => {
@@ -76,7 +76,7 @@ const ReservationsSelector = ({
             setSectorError(null);
             setSeatError(null);
           }}
-          className="w-full rounded-lg p-2 bg-lightBg text-black"
+          className="w-full rounded-lg p-2 bg-brand-white text-black"
           data-testid="ticket-select"
         >
           <option value="">Elige un ticket</option>
@@ -87,13 +87,13 @@ const ReservationsSelector = ({
           ))}
         </select>
         {ticketTypeError && (
-          <p className="text-red-500 text-sm mt-1">{ticketTypeError}</p>
+          <p className="text-brand-danger text-sm mt-1">{ticketTypeError}</p>
         )}
       </div>
 
       {filteredSectors.length > 0 && (
         <div>
-          <label className="block text-white mb-1">Sector</label>
+          <label className="block text-brand-white mb-1">Sector</label>
           <select
             value={sectorId}
             onChange={(e) => {
@@ -103,7 +103,7 @@ const ReservationsSelector = ({
               setSectorError(null);
               setSeatError(null);
             }}
-            className="w-full rounded-lg p-2 bg-lightBg text-black"
+            className="w-full rounded-lg p-2 bg-brand-white text-black"
             data-testid="sector-select"
           >
             <option value="">Elige un Sector</option>
@@ -114,7 +114,7 @@ const ReservationsSelector = ({
             ))}
           </select>
           {sectorError && (
-            <p className="text-red-500 text-sm mt-1">{sectorError}</p>
+            <p className="text-brand-danger text-sm mt-1">{sectorError}</p>
           )}
         </div>
       )}
@@ -130,7 +130,7 @@ const ReservationsSelector = ({
               setSectorError(null);
               setSeatError(null);
             }}
-            className="w-full rounded-lg p-2 bg-lightBg text-black"
+            className="w-full rounded-lg p-2 bg-brand-white text-black"
             data-testid="seats-select"
           >
             <option value="">Elige un Asiento</option>
@@ -141,7 +141,7 @@ const ReservationsSelector = ({
             ))}
           </select>
           {seatError && (
-            <p className="text-red-500 text-sm mt-1">{seatError}</p>
+            <p className="text-brand-danger text-sm mt-1">{seatError}</p>
           )}
         </div>
       )}

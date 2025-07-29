@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { User, Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "../../logo/logo.png";
 
 const NavigationBar = () => {
   const location = useLocation();
@@ -17,32 +16,35 @@ const NavigationBar = () => {
   ];
 
   return (
-    <nav className="bg-black text-white px-6 py-3 flex items-center justify-between sticky top-0 z-20">
-      <div className="flex items-center gap-8">
+    <nav className="bg-brand-navbar text-brand-white mx-0 py-0 mb-4 flex items-center justify-between sticky top-0 z-20">
+      <div className="flex md:hidden items-center mx-2 px-4 py-2 ">
         <button
-          className="md:hidden"
           aria-label="Toggle menu"
           onClick={() => setMenuOpen(!menuOpen)}
+          className="text-brand-white"
         >
           <Menu size={28} />
         </button>
+      </div>
+
+      <div className="flex-1 flex justify-center md:justify-start">
         <Link
           to="/"
-          className="hidden sm:block flex items-center gap-2"
           onClick={() => setMenuOpen(false)}
+          className="flex items-center text-brand-accent"
         >
-          <img src={logo} alt="Logo" className="h-12 w-auto" />
+          <span className="text-lg font-bold mx-1 py-2 h-10 sm:h-10 w-auto ">
+            OPUSTIX
+          </span>
         </Link>
       </div>
 
       <div
-        className={`text-lg font-medium flex-1 flex justify-center items-center gap-6 
-          ${
-            menuOpen
-              ? "absolute top-full left-0 bg-black w-full flex-col p-4"
-              : "hidden md:flex"
-          }
-        `}
+        className={`${
+          menuOpen
+            ? "absolute top-full left-0 w-full bg-black flex flex-col items-center gap-4 py-6"
+            : "hidden"
+        } md:flex md:static md:flex-row md:gap-6 md:items-center md:ml-8`}
       >
         {navItems.map(({ to, label }) => {
           const isActive = location.pathname === to;
@@ -51,8 +53,10 @@ const NavigationBar = () => {
               key={to}
               to={to}
               onClick={() => setMenuOpen(false)}
-              className={`px-3 py-1 rounded-md hover:bg-gray-700 transition-colors ${
-                isActive ? "bg-gray-700 font-semibold" : ""
+              className={`px-1 py-2 rounded-md transition-colors ${
+                isActive
+                  ? "bg-brand-lightGray text-brand-darkerText font-semibold"
+                  : "hover:bg-brand-lightGray hover:text-brand-darkerText"
               }`}
             >
               {label}
@@ -61,10 +65,10 @@ const NavigationBar = () => {
         })}
       </div>
 
-      <div className="flex gap-4 items-center">
+      <div className="flex items-center px-2 py-2 ">
         <Link
           to="/login"
-          className="hover:text-gray-400"
+          className="hover:text-brand-lightGray"
           title="Usuario"
           onClick={() => setMenuOpen(false)}
         >

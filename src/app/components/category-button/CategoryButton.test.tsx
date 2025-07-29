@@ -7,21 +7,15 @@ describe("CategoryButton", () => {
     render(<CategoryButton>Click me</CategoryButton>);
     const button = screen.getByRole("button", { name: /click me/i });
     expect(button).toBeInTheDocument();
-    expect(button).toHaveClass("bg-secondary");
+    expect(button).toHaveClass("bg-brand-primary");
     expect(button).toHaveClass("p-2");
   });
 
   it("renders with 'dark' variant", () => {
     render(<CategoryButton variant="dark">Dark Mode</CategoryButton>);
     const button = screen.getByRole("button", { name: /dark mode/i });
-    expect(button).toHaveClass("bg-secondary-dark");
-    expect(button).toHaveClass("text-secondary");
-  });
-
-  it("renders with 'ghost' variant", () => {
-    render(<CategoryButton variant="ghost">Ghost</CategoryButton>);
-    const button = screen.getByRole("button", { name: /ghost/i });
-    expect(button).toHaveClass("hover:bg-gray-100");
+    expect(button).toHaveClass("bg-brand-accent");
+    expect(button).toHaveClass("text-brand-white");
   });
 
   it("renders with icon size", () => {

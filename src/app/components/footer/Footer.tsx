@@ -2,7 +2,7 @@ import { FaDiscord, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white px-6 py-8 mt-12 border-t border-gray-800">
+    <footer className="bg-black text-white text-lg p-2 m-2">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
         <div className="text-center md:text-left">
           &copy; {new Date().getFullYear()} Opustix. All rights reserved.

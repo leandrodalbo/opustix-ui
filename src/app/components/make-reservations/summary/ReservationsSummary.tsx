@@ -24,7 +24,7 @@ const ReservationsSummary = ({
   );
 
   return (
-    <div className="bg-darkBg rounded-xl p-4 text-white">
+    <div className="bg-brand-card rounded-xl p-4 text-white">
       <h3 className="text-lg font-semibold mb-4">Reservas a Confirmar</h3>
       <ul className="space-y-3">
         {reservations.map((res, index) => {
@@ -41,22 +41,25 @@ const ReservationsSummary = ({
             >
               <div className="space-y-1">
                 <p className="font-medium" data-testid="reservation-ticket">
-                  <b>Ticket:</b> {ticket?.name} - ${ticket?.price.toFixed(2)}
+                  <b className="text-bramd-darkerText">Ticket:</b>{" "}
+                  {ticket?.name} - ${ticket?.price.toFixed(2)}
                 </p>
                 {sector?.name && (
                   <p data-testid={`reservation-sector-${sector.id}`}>
-                    <b>Sector:</b> {sector.name}
+                    <b className="text-bramd-darkerText">Sector:</b>{" "}
+                    {sector.name}
                   </p>
                 )}
                 {seat?.label && (
                   <p data-testid={`reservation-sector-${seat.id}`}>
-                    <b>Asiento:</b> {seat.label}
+                    <b className="text-bramd-darkerText">Asiento:</b>{" "}
+                    {seat.label}
                   </p>
                 )}
               </div>
               <button
                 onClick={() => removeReservation(index)}
-                className="mt-2 md:mt-0 bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md"
+                className="mt-2 md:mt-0 bg-brand-danger hover:bg-red-600 text-white px-3 py-1 rounded-md"
               >
                 Eliminar
               </button>

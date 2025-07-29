@@ -22,7 +22,7 @@ const EventInfo = ({ eventDetails }: EventInfoProps) => {
   );
 
   return (
-    <div className="bg-darkBg rounded-2xl shadow-md p-4 text-lightText">
+    <div className="bg-brand-card rounded-2xl shadow-md p-4 text-brand-white">
       <img
         src={imgService(eventDetails.mainBanner, true)}
         alt={eventDetails.title}
@@ -30,14 +30,14 @@ const EventInfo = ({ eventDetails }: EventInfoProps) => {
       />
 
       <div>
-        <h2 className="text-2xl font-semibold text-darkText">
+        <h2 className="text-2xl font-semibold text-brand-accent">
           {eventDetails.title}
         </h2>
-        <p className="text-secondary-text mt-2">{eventDetails.description}</p>
-        <p className="text-sm text-secondary-text mt-4">
+        <p className="text-brand-white mt-2">{eventDetails.description}</p>
+        <p className="text-sm text-brand-white mt-4">
           🕒 {formattedStart} - {formattedEnd}
         </p>
-        <p className="text-sm text-secondary-text mt-1">
+        <p className="text-sm text-brand-white mt-1">
           📍 {eventDetails.venueDto.name} - {eventDetails.venueDto.address}
         </p>
       </div>
