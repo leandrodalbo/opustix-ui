@@ -25,7 +25,7 @@ const ReservationFormWrapper = ({
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-4 text-white">
+    <div className="max-w-4xl mx-auto p-4 text-brand-white">
       <EventInfo eventDetails={eventDetails} />
 
       <div className="mt-6" data-testid="reservations-selector">

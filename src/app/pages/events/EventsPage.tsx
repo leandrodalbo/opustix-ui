@@ -5,14 +5,12 @@ import {
   fromUnixTime,
   startOfDay,
   isBefore,
+  endOfDay,
 } from "date-fns";
 import { useQuery } from "@tanstack/react-query";
-
-import { Box } from "@mui/material";
-
 import { Event } from "../../types/types";
 import EventFilters from "../../components/events-filters/EventsFilters";
-import { EventsMaterialGrid } from "../../components/events-grid/EventsMaterialGrid";
+import { EventsGrid } from "../../components/events-simple-grid/EventsGrid";
 import AboutFetch from "../../components/about-fetch/AboutFetch";
 
 interface EventsPageProps {
@@ -41,38 +39,32 @@ export default function EventsPage({ fetchEvents }: EventsPageProps) {
 
   const filteredEvents = events
     .filter((event) => {
-      const matchesTitle =
-        eventTitle.length > 0
-          ? event.title.toLowerCase().includes(eventTitle.toLowerCase())
-          : true;
+      const matchesTitle = eventTitle
+        ? event.title.toLowerCase().includes(eventTitle.toLowerCase())
+        : true;
+      const matchesCity = cityFilter
+        ? event.venue.city.toLowerCase().includes(cityFilter.toLowerCase())
+        : true;
+      const matchesCategory = categoryFilter
+        ? event.category.toLowerCase().includes(categoryFilter.toLowerCase())
+        : true;
 
-      const matchesCity =
-        cityFilter.length > 0
-          ? event.venue.city.toLowerCase().includes(cityFilter.toLowerCase())
-          : true;
-
-      const matchesCategory =
-        categoryFilter.length > 0
-          ? event.category.toLowerCase().includes(categoryFilter.toLowerCase())
-          : true;
-
-      const startDate = startOfDay(fromUnixTime(event.startTime));
-      const endDate = startOfDay(fromUnixTime(event.endTime));
+      const startDate = startOfDay(new Date(event.startTime));
+      const endDate = endOfDay(new Date(event.endTime));
 
       const matchesDate = dateFilter
-        ? isSameDay(startOfDay(dateFilter), startDate) ||
-          isSameDay(startOfDay(dateFilter), endDate) ||
-          (isAfter(startOfDay(dateFilter), startDate) &&
-            isBefore(startOfDay(dateFilter), endDate))
+        ? isSameDay(dateFilter, startDate) ||
+          isSameDay(dateFilter, endDate) ||
+          (isAfter(dateFilter, startDate) && isBefore(dateFilter, endDate))
         : true;
 
       return matchesTitle && matchesCity && matchesCategory && matchesDate;
     })
-    .sort((a, b) => {
-      const dateA = fromUnixTime(a.startTime);
-      const dateB = fromUnixTime(b.startTime);
-      return dateA.getTime() - dateB.getTime();
-    });
+    .sort(
+      (a, b) =>
+        fromUnixTime(a.startTime).getTime() -
+        fromUnixTime(b.startTime).getTime()
+    );
 
   if (isLoading || error)
     return (
@@ -83,10 +75,7 @@ export default function EventsPage({ fetchEvents }: EventsPageProps) {
     );
 
   return (
-    <Box
-      p={4}
-      sx={{ backgroundColor: "black", color: "white", minHeight: "100vh" }}
-    >
+    <div className="w-full mx-auto px-12 py-12">
       <EventFilters
         eventTitle={eventTitle}
         setEvenTitle={setEventTitle}
@@ -100,8 +89,8 @@ export default function EventsPage({ fetchEvents }: EventsPageProps) {
       />
 
       <div data-testid="events-material-grid">
-        <EventsMaterialGrid events={filteredEvents} />
+        <EventsGrid events={filteredEvents} />
       </div>
-    </Box>
+    </div>
   );
 }

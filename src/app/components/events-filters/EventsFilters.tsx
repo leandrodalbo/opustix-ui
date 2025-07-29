@@ -28,13 +28,13 @@ const EventFilters = ({
   clearFilters,
 }: EventFiltersProps) => {
   return (
-    <div className="flex flex-col items-center gap-4 md:flex-row md:justify-center mb-6 text-black">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
       <input
         type="text"
         placeholder="Título del evento"
         value={eventTitle}
         onChange={(e) => setEvenTitle(e.target.value)}
-        className="w-64 h-10 text-sm bg-white text-black placeholder-black rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="bg-white text-black p-3 rounded w-full"
       />
 
       <input
@@ -42,7 +42,7 @@ const EventFilters = ({
         placeholder="Ciudad"
         value={cityFilter}
         onChange={(e) => setCityFilter(e.target.value)}
-        className="w-64 h-10 text-sm bg-white text-black placeholder-black rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="bg-white text-black p-3 rounded w-full"
       />
 
       <input
@@ -50,38 +50,39 @@ const EventFilters = ({
         placeholder="Categoría"
         value={categoryFilter}
         onChange={(e) => setCategoryFilter(e.target.value)}
-        className="w-64 h-10 text-sm bg-white text-black placeholder-black rounded-md px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="bg-white text-black p-3 rounded w-full"
       />
 
-      <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={es}>
-        <DatePicker
-          value={dateFilter}
-          onChange={(newDate) => setDateFilter(newDate)}
-          slotProps={{
-            textField: {
-              placeholder: "Fecha",
-              InputProps: {
-                sx: {
-                  height: 40,
-                  backgroundColor: "#ffffff",
-                  color: "#000000",
-                  paddingLeft: "12px",
-                  paddingRight: "12px",
-                  fontSize: "0.875rem",
+      <div className="bg-white rounded w-full">
+        <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={es}>
+          <DatePicker
+            value={dateFilter}
+            onChange={(newDate) => setDateFilter(newDate)}
+            slotProps={{
+              textField: {
+                fullWidth: true,
+                variant: "outlined",
+                InputProps: {
+                  sx: {
+                    height: 48,
+                    backgroundColor: "#ffffff",
+                    color: "#000000",
+                    fontSize: "0.875rem",
+                  },
+                },
+                InputLabelProps: {
+                  shrink: true,
+                  sx: { display: "none" },
                 },
               },
-              InputLabelProps: {
-                shrink: true,
-                sx: { display: "none" }, // hides label
-              },
-            },
-          }}
-        />
-      </LocalizationProvider>
+            }}
+          />
+        </LocalizationProvider>
+      </div>
 
       <button
         onClick={clearFilters}
-        className="text-sm hover:bg-gray-700  hover:text-white bg-white text-black px-3 py-1.5 rounded-md transition"
+        className="bg-white text-black p-3 rounded w-full hover:bg-gray-100 transition"
       >
         Limpiar filtros
       </button>

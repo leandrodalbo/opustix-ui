@@ -12,7 +12,7 @@ import postReservations from "../services/reservations";
 
 export const App = () => {
   return (
-    <div className="flex-grow overflow-auto px-8 pb-4">
+    <div className="flex-grow overflow-auto px-12 pb-8">
       <Routes>
         <Route path="/" element={<Home fetchEvents={fetchEvents} />} />
 
