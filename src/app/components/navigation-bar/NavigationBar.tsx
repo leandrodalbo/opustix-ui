@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { User, Menu } from "lucide-react";
 import { useState } from "react";
-import logo from "../../logo/logo.png";
 
 const NavigationBar = () => {
   const location = useLocation();
@@ -32,9 +31,11 @@ const NavigationBar = () => {
         <Link
           to="/"
           onClick={() => setMenuOpen(false)}
-          className="flex items-center"
+          className="flex items-center text-brand-accent"
         >
-          <img src={logo} alt="Logo" className="h-10 sm:h-10 w-auto " />
+          <span className="text-lg font-bold mx-1 py-2 h-10 sm:h-10 w-auto ">
+            OPUSTIX
+          </span>
         </Link>
       </div>
 
@@ -64,7 +65,7 @@ const NavigationBar = () => {
         })}
       </div>
 
-      <div className="flex items-center px-6 py-2 ">
+      <div className="flex items-center px-2 py-2 ">
         <Link
           to="/login"
           className="hover:text-brand-lightGray"

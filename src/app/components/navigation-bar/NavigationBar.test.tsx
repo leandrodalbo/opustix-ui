@@ -20,7 +20,7 @@ describe("NavigationBar", () => {
       </MemoryRouter>
     );
 
-    expect(screen.getByAltText("Logo")).toBeInTheDocument();
+    expect(screen.getByText("OPUSTIX")).toBeInTheDocument();
     expect(screen.getByTitle("Usuario")).toBeInTheDocument();
     expect(screen.getByText("EVENTOS")).toBeInTheDocument();
     expect(screen.getByText("HOME")).toBeInTheDocument();
