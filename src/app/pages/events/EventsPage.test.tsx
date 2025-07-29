@@ -4,6 +4,7 @@ import EventsPage from "./EventsPage"; // Adjust path
 import { vi } from "vitest";
 import { events } from "../../../../testSetup/mockdata";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { MemoryRouter } from "react-router-dom";
 
 const fetchEvents = vi.fn().mockResolvedValue(events);
 
@@ -83,7 +84,11 @@ vi.mock("../../components/events-grid/EventsMaterialGrid", async () => {
 
 describe("EventsPage", () => {
   const setup = () => {
-    renderWithClient(<EventsPage fetchEvents={fetchEvents} />);
+    renderWithClient(
+      <MemoryRouter>
+        <EventsPage fetchEvents={fetchEvents} />
+      </MemoryRouter>
+    );
   };
 
   it("renders all events by default", async () => {

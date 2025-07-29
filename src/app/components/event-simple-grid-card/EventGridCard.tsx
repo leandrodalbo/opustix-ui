@@ -12,6 +12,7 @@ const EventGridCard = ({ event }: EventGridCardProps) => {
 
   return (
     <div
+      data-testid="event-card"
       className="bg-brand-card rounded-xl p-4 shadow-md text-brand-white text-base text-md md:text-lg"
       key={event.id}
     >

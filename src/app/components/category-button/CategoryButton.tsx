@@ -10,7 +10,6 @@ export const buttonStyles = cva(["transition-colors"], {
         "text-brand-white",
         "hover:bg-brand-accent",
       ],
-      ghost: ["hover:bg-card"],
       dark: ["bg-brand-accent", "hover:bg-brand-primary", "text-brand-white"],
     },
     size: {
